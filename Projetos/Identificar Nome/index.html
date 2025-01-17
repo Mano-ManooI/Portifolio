@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu sei seu nome...</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div id="login">
+            <h1>Usuário</h1>
+            <form>
+                <input type="text" placeholder="Nome" oninput="Leters()" id="name">
+                <input type="number" oninput="DigitNum()" placeholder="Idade" value="" min="0" max="100" id="age">
+                <p id="MessageError"></p>
+                <button type="button" onclick="EnterUser()">Jogar</button>
+            </form>
+        </div>
+        <div id="messageName">
+            <h3 id="info"></h3>
+            <h1 id="mensagen"></h1>
+            <div id="ButtonLocation"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
