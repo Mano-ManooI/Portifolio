@@ -1,0 +1,91 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: helvetica, arial, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.container{
+    background-color: #fff;
+    box-shadow: 0 4px 34px rgba(0,0,0,.14);
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px;
+    max-width: 400px;
+    min-width: 400px;
+}
+
+.container #addTask label input{
+    border-radius: 20px;
+    border: 1px solid #f0f0f0;
+    padding: 15px 150px 15px 5px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.container #addTask label button{
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    background-color: #00f;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 15px 18px;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.container #addTask label button:hover{
+    background-color: rgb(32, 32, 224);
+}
+
+.container #addTask label button:hover{
+    border: none;
+}
+
+.container #info{
+    color: #ff0000;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: -2px;
+    margin-bottom: 8px;
+}
+
+.container #taskList ul{
+    border: 1px solid #f0f0f0;
+    border-radius: 3px;
+    padding: 0;
+    margin: 0;
+}
+
+.container ul li{
+    list-style: none;
+    font-weight: bold;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.container ul li button{
+    border-radius: 50%;
+    border: none;
+    margin-left: auto;
+    cursor: pointer;
+    background: none;
+    margin-left: auto;
+}
+
+.container ul li button img{
+    width: 40px;
+    height: 40px;
+}
