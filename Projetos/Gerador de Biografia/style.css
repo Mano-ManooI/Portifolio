@@ -1,0 +1,112 @@
+*{
+    font-family: helvetica, arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f1f1f1;
+    color: #000;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.container{
+    background-color: #fff;
+    padding: 10px;
+    width: 850px;
+    max-width: 850px;
+}
+
+#mainHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    max-width: 140px;
+    max-height: 50px;
+    background-color: #777;
+    border-radius: 5px;
+    box-shadow: 0 4px 14px  rgba(0,0,0,.14);
+    color: #fff;
+    font-size: 10px;
+    transition: .4s ease;
+}
+
+#mainHeader:hover{
+    background-color: #666;
+}
+
+#mainHeader img{
+    width: 40px;margin-right: -12px;
+}
+
+.container main #title{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 40px;
+    background: linear-gradient(to bottom, #f1f1f1, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container main #step1 label input{
+    display: flex;
+    padding: 8px 120px 8px 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.container main #step1 label select{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.container main button{
+    padding: 5px 50px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #00ff;
+    border: none;
+    border-radius: 3px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.container main button:hover{
+    background-color: rgb(0,90,255);
+}
+
+.container main #step1 label #errorInfo{
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #f00;
+    text-decoration: underline;
+}
+
+.container main #step2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center
+
+}
+
+.container main #step2 #text{
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 410px;
+    margin-left: 25%;
+    padding: 15px;
+}
