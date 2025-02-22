@@ -1,4 +1,17 @@
 const input = document.getElementById("number")
+
+const playButton = document.getElementById("play")
+function toggleButtonState(){
+    if(input.value === ""){
+        playButton.classList.add("disabled")
+        playButton.disabled = true
+    }else{
+        playButton.classList.remove("disabled")
+        playButton.disabled = false
+    }
+}
+
+
 input.addEventListener("input", () =>{
     input.value = input.value.replace(/[^0-9]/g, "")
     
@@ -9,10 +22,12 @@ input.addEventListener("input", () =>{
     }else if(input.value == "0"){
         input.value = ""
     }
+
+    toggleButtonState()
 })
 
 const randomNumber = Math.floor(Math.random() * 100) + 1
-console.log(randomNumber)
+
 function play(){
     const numberPlayer = parseInt(input.value, 10)
     
@@ -28,6 +43,8 @@ function play(){
     }
 
     input.value = ""
+    toggleButtonState()
 }
 
-document.getElementById("play").addEventListener("click", play)
+playButton.addEventListener("click", play)
+toggleButtonState()
