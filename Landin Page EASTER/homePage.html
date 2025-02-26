@@ -1,11 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/Icon.png" type="image/png">
     <title>Easter</title>
 </head>
 <body>
-    
+
+    <div class="container">
+        <header>
+            <img src="./img/Logo.png" alt="Logo Easter" draggable="false">
+            <nav>
+                <ul>
+                    <li><a href="#Home" draggable="false">Início</a></li>
+                    <li><a href="#About" draggable="false">Sobre</a></li>
+                    <li><a href="#Work" draggable="false">Trabalho</a></li>
+                    <li><a href="#Contact" draggable="false">Contato</a></li>
+                    <li><a href="#Search" draggable="false"><box-icon name='search-alt-2' ></box-icon></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="Home">
+                <div id="homeText">
+                    <h2>Nosso objetivo é garantir seu <br> sucesso no campo. E o seu?</h2>
+                    <h4>Com qualidade, transformamos a gestão da sua propriedade.</h4>
+                    <a href="#Contact">Saber Mais</a>
+                </div>
+                <div id="homeImg">
+                    <img src="./img/image1.png" alt="Homem do campo" draggable="false">
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div id="About">
+                <h4 class="info">Sobre</h4>
+                <div id="aboutImg">
+                    <img src="#" alt="Empresa Easter"  draggable="false">
+                    <img src="#" alt="Técnico/Empresário José Roberto"  draggable="false">
+                </div>
+                <div id="aboutText">
+                    <div class="aboutBoxText">
+                        <h3>Quem somos?</h3>
+                        <p>Somos uma empresa que visa a qualidade e a eficiência na gestão de propriedades rurais. Com profissionais qualificados, garantimos a melhor experiência para o produtor rural.</p>
+                    </div>
+                    <div class="aboutBoxText">
+                        <h3>Quem é José Roberto?</h3>
+                        <p>Com mais de 20 anos de experiência no campo, José Roberto é um técnico agrícola que se tornou empresário. Com sua experiência, ele garante a qualidade e a eficiência dos serviços prestados pela Easter.</p>
+                    </div>
+                    <div class="aboutBoxText">
+                        <h3>Missão</h3>
+                        <p>Transformar a gestão de propriedades rurais, garantindo a qualidade e a eficiência dos serviços prestados.</p>
+                    </div>
+                    <div class="aboutBoxText">
+                        <a href="https://maps.app.goo.gl/1uq154p945DfTf1y7" target="_blank" draggable="false"><box-icon type='solid' name='map'></box-icon></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
