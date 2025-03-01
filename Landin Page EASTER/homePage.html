@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -18,11 +18,10 @@
             <img src="./img/Logo.png" alt="Logo Easter" draggable="false">
             <nav>
                 <ul>
-                    <li><a href="#Home" draggable="false">Início</a></li>
-                    <li><a href="#About" draggable="false">Sobre</a></li>
-                    <li><a href="#Work" draggable="false">Trabalho</a></li>
-                    <li><a href="#Contact" draggable="false">Contato</a></li>
-                    <li><a href="#Search" draggable="false"><box-icon name='search-alt-2' ></box-icon></a></li>
+                    <li><button class="scrollPage" id="scrollHome">Início</button></li>
+                    <li><button class="scrollPage" id="scrollAbout">Sobre</button></li>
+                    <li><button class="scrollPage" id="scrollWork">Trabalho</button></li>
+                    <li><button class="scrollPage" id="scrollContact">Contato</button></li>
                 </ul>
             </nav>
         </header>
@@ -31,7 +30,7 @@
                 <div id="homeText">
                     <h2>Nosso objetivo é garantir seu <br> sucesso no campo. E o seu?</h2>
                     <h4>Com qualidade, transformamos a gestão da sua propriedade.</h4>
-                    <a href="#Contact">Saber Mais</a>
+                    <button id="scrollContact">Saber Mais</button>
                 </div>
                 <div id="homeImg">
                     <img src="./img/image1.png" alt="Homem do campo" draggable="false">
@@ -43,7 +42,7 @@
                 <div id="mainAbout">
                     <div id="aboutImg">
                         <img src="./img/Easter.png" alt="Empresa Easter" id="EasterImg" draggable="false">
-                        <img src="#" alt="Técnico/Empresário José Roberto" id="BetoImg" draggable="false">
+                        <img src="#" alt="Técnico Rural/Empresário José Roberto" id="BetoImg" draggable="false">
                     </div>
                     <div id="aboutText">
                         <div class="aboutBoxText">
@@ -57,6 +56,33 @@
                         <div class="aboutBoxText">
                             <h3>Missão</h3>
                             <p>Transformar a gestão de propriedades rurais, garantindo a qualidade e a eficiência dos serviços prestados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="Work">
+                <h4 class="info">Trabalho</h4>
+                <div id="mainWork">
+                    <div class="boxWork">
+                        #
+                        <h3></h3>
+                    </div>
+                </div>
+            </div>
+            <div id="Contact">
+                <h4 class="info">Contato</h4>
+                <div id="mainContact">
+                    <div id="imgContact">
+                        <img src="./img/Logo.png" alt="Logo Easter">
+                    </div>
+                    <div id="infoContact">
+                        <div id="textContact">
+                            <h3>Estamos aqui para resolver todas as suas dúvidas e mostrar por que somos a escolha certa para o sucesso do seu empreendimento agrícola.</h3>
+                            <h4>Entre em contato com nossa equipe pelo WhatsApp e descubra como podemos impulsionar seu sucesso agrícola!</h4>
+                        </div>
+                        <div id="buttonContact">
+                            <button id="instagram"><i class='bx bxl-instagram'></i> Redes Sociais</button>
+                            <button id="whatsApp"><i class='bx bxl-whatsapp'></i> WhatsApp</button>
                         </div>
                     </div>
                 </div>
