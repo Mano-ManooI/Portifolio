@@ -1,8 +1,8 @@
-const words = ["Cubo", "Janela", "Avião", "Lápis", "Bateria", "Lua", "Javalí", "Chapéu", "Alterações","Pneumoultramicroscopicossilicovulcanoconiótico"];
+const words = ["Cubo", "Janela", "Avião", "Lápis", "Bateria", "Lua", "Javalí", "Chapéu", "Alterações", "Teclado"];
 const random = Math.floor(Math.random() * words.length);
 const wordLetters = document.getElementById("wordLetters");
 
-function test(){
+function letter(){
     const letterClicked = event.target.innerText;
     console.log(`Letra clicada: ${letterClicked}`);
 }
@@ -15,7 +15,7 @@ function init(){
 };
 
 document.querySelectorAll("#letters").forEach(element => {
-    element.addEventListener("click", test)
+    element.addEventListener("click", letter)
 });
 
 init()
