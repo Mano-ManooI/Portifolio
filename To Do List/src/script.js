@@ -6,8 +6,13 @@ imgManoManooI.addEventListener("click", (event) =>{
 });
 
 const inputTask = document.getElementById("task");
-inputTask.addEventListener("inputTask", () =>{
-    inputTask.value = inputTask.value.replace(/[^A-ZA-zÀ-ú\s]/g, "");
+inputTask.addEventListener("input", () =>{
+    inputTask.value = inputTask.value.replace(/[^A-Za-zÀ-ú\s]/g, "");
+
+    const maxLength = 20;
+    if (inputTask.value.length > maxLength){
+        inputTask.value = inputTask.value.slice(0, maxLength);
+    };
 });
 
 function toDoList(){
