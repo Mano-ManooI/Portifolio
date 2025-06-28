@@ -9,7 +9,7 @@ const inputTask = document.getElementById("task");
 inputTask.addEventListener("input", () =>{
     inputTask.value = inputTask.value.replace(/[^A-Za-zÀ-ú\s]/g, "");
 
-    const maxLength = 20;
+    const maxLength = 25;
     if (inputTask.value.length > maxLength){
         inputTask.value = inputTask.value.slice(0, maxLength);
     };
