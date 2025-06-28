@@ -1,9 +1,20 @@
+const imgManoManooI = document.getElementById("ManoManooILink");
+imgManoManooI.addEventListener("click", (event) =>{
+    event.preventDefault();
+
+    window.open("https://github.com/Mano-ManooI");
+});
+
 const inputTask = document.getElementById("task");
 inputTask.addEventListener("inputTask", () =>{
     inputTask.value = inputTask.value.replace(/[^A-ZA-zÀ-ú\s]/g, "");
 });
 
 function toDoList(){
+    if(inputTask.value.trim() === ""){
+        return;
+    };
+
     let task = inputTask.value.trim();
     task = task.charAt(0).toUpperCase() + task.slice(1).toLowerCase();
 
