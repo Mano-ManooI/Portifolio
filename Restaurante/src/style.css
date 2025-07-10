@@ -5,25 +5,14 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    list-style: none;
-    outline: none;
-    font-family: "poppins", serif;
+    font-family: "Poppins", serif;
 }
 
 header{
-    width: 100%;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
     height: 95px;
-    box-shadow: 0 0 14px rgba(0,0,0,0.14);
-}
-
-header img{
-    width: 35vh;
-    margin: 0 -25px -25px -25px;
-}
-
-main{
-    background: url(../img/hamburguer.jpg) no-repeat center center / cover;
-    background-size: cover;
-    min-height: 100vh;
-    width: 100%;
+    position: fixed;
 }
