@@ -1,0 +1,88 @@
+*{
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    transition: all 0.4s;
+    font-family: helvetica, arial, serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    height: 55%;
+    background-color: #ccc;
+    border-radius: 15px;
+}
+
+main #result{
+    width: 145px;
+    margin-bottom: 30px;
+}
+
+main button#play{
+    cursor: pointer;
+    background: #00f;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding: 10px 35px;
+    border-radius: 8px;
+    transition: ease-in 0.3s;
+}
+
+main button#play:hover{
+    background: rgb(6, 6, 207);
+}
+
+main img#facePoint{
+    width: 100px;
+    position: absolute;
+    top: 25%;
+    left: 25px;
+}
+
+main #points #face #pointsFace{
+    font-size: 3rem;
+    position: absolute;
+    top: 28%;
+    left: 165px;
+}
+
+main img#crownPoint{
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 25px;
+}
+
+
+main #points #crown #pointsCrown{
+    font-size: 3rem;
+    position: absolute;
+    top: 53%;
+    left: 165px;
+}
+
+main #credits #mano-manooi{
+    width: 150px;
+    position: absolute;
+    top: 75%;
+    right: 35px;
+    cursor: pointer;
+    transition: ease-in 0.3s;
+}
+
+main #credits #mano-manooi:hover{
+    width: 155px;
+}
