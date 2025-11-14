@@ -1,7 +1,5 @@
-function headerPosition(){
-    window.addEventListener("scroll", () =>{
-        const header = document.querySelector("header");
-        
+window.addEventListener("DOMContentLoaded", () =>{
+    document.querySelector("img").addEventListener("click", () =>{
+        window.scrollTo({top: 0, behavior: "smooth"});
     });
-}
-headerPosition();
+});
