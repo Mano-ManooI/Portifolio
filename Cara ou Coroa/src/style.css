@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 *{
     outline: none;
     border: none;
@@ -22,6 +24,7 @@ main{
     width: 40%;
     height: 55%;
     background-color: #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.14);
     border-radius: 15px;
 }
 
@@ -33,6 +36,7 @@ main #result{
 main button#play{
     cursor: pointer;
     background: #00f;
+    box-shadow: 0 0 14px 4px rgba(0,0,0,0.14);
     color: #fff;
     font-weight: bolder;
     font-size: 1.5rem;
@@ -42,7 +46,7 @@ main button#play{
 }
 
 main button#play:hover{
-    background: rgb(6, 6, 207);
+    background: rgb(0, 0, 235);
 }
 
 main img#facePoint{
@@ -54,6 +58,7 @@ main img#facePoint{
 
 main #points #face #pointsFace{
     font-size: 3rem;
+    font-weight: bold;
     position: absolute;
     top: 28%;
     left: 165px;
@@ -69,20 +74,35 @@ main img#crownPoint{
 
 main #points #crown #pointsCrown{
     font-size: 3rem;
+    font-weight: bold;
     position: absolute;
     top: 53%;
     left: 165px;
 }
 
-main #credits #mano-manooi{
-    width: 150px;
-    position: absolute;
-    top: 75%;
-    right: 35px;
+main #credits{
+    background: #757575;
+    padding: 15px;
     cursor: pointer;
-    transition: ease-in 0.3s;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 25px;
+    bottom: 5%;
+    border-radius: 25px;
 }
 
-main #credits #mano-manooi:hover{
-    width: 155px;
+main #credits:hover{
+    background: #656565;
+}
+
+main #credits h5{
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 10px;
+    font-family: "JetBrains Mono", monospace;
+}
+
+main #credits #mano-manooi{
+    width: 60px;
 }

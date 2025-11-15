@@ -24,7 +24,7 @@ buttonPlay.addEventListener("click", () =>{
     pointsFaceElement.innerText = pointsFace;
 });
 
-const creditsManoManooI = document.getElementById("mano-manooi");
+const creditsManoManooI = document.getElementById("credits");
 creditsManoManooI.addEventListener("click", () =>{
     window.open("https://github.com/Mano-ManooI");
 });
