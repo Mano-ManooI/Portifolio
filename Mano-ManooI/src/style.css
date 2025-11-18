@@ -1,15 +1,33 @@
 *{
     margin: 0;
     padding: 0;
+    outline: none;
+    list-style: none;
+    transition: all 0.5s;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header{
-    background: red;
+    position: fixed;
+    width: 75%;
+    height: 95px;
+    transform: translateX(15%);
+    margin: 20px 0px;
+    background: #fff;
     box-shadow: 0 4px 14px rgba(0,0,0,0.15);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 95px;
+    border-radius: 50px;
 }
 
 header img#logo{
@@ -22,12 +40,34 @@ header nav#menu ul{
     display: flex;
 }
 
+header nav#menu ul li{
+    padding: 25px;
+}
+
 header nav#menu ul li button{
     background: none;
     border: none;
-    cursor: pointer;
-    margin: 25px;
-    color: #fff;
+    font-size: 1.2rem;
     font-weight: bold;
-    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+}
+
+header nav#menu ul li button .fa-solid, .fa-brands{
+    font-size: 1.7rem;
+}
+
+main{
+    margin-top: 135px;
+}
+
+footer{
+    width: 100%;
+    padding: 20px 0;
+    background: #353535;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
 }

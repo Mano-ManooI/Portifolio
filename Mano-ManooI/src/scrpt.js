@@ -1,44 +1,36 @@
-const elementStart = document.getElementById("start");
-const elementAbout = document.getElementById("about");
-const elementCredits = document.getElementById("credits");
+const logo = document.getElementById("logo");
+logo.addEventListener("click", () =>{
+    open("https://github.com/Mano-ManooI");
+});
 
-const iconStart = elementStart.innerHTML;
+const elementToStart = document.getElementById("toStart");
+const elementToAbout = document.getElementById("toAbout");
+const elementToProjects = document.getElementById("toProjects");
+const elementToContact = document.getElementById("toContact");
+
 const textStart = "Início";
-elementStart.innerHTML;
-elementStart.addEventListener("mouseover", () =>{
-    elementStart.innerText = textStart;
-});
-elementStart.addEventListener("mouseout", () =>{
-    elementStart.innerHTML = iconStart;
-});
-
-const iconAbout = elementAbout.innerHTML;
 const textAbout = "Sobre";
-elementAbout.innerHTML;
-elementAbout.addEventListener("mouseover", () =>{
-    elementAbout.innerText = textAbout;
-});
-elementAbout.addEventListener("mouseout", () =>{
-    elementAbout.innerHTML = iconAbout;
+const textProjects = "Projetos";
+const textContact = "Contato";
+const iconStart = `<i class="fa-solid fa-house"></i>`;
+const iconAbout = `<i class="fa-solid fa-circle-info"></i>`;
+const iconProjects = `<i class="fa-solid fa-briefcase"></i>`;
+const iconContact = `<i class="fa-brands fa-square-whatsapp"></i>`;
+
+window.addEventListener("scroll", () =>{
+    if(window.scrollY > 150){
+        elementToStart.innerHTML = iconStart;
+        elementToAbout.innerHTML = iconAbout;
+        elementToProjects.innerHTML = iconProjects;
+        elementToContact.innerHTML = iconContact;
+    }else{
+        elementToStart.innerHTML = textStart;
+        elementToAbout.innerHTML = textAbout;
+        elementToProjects.innerHTML = textProjects;
+        elementToContact.innerHTML = textContact;
+    };
 });
 
-const elementProjects = document.getElementById("projects");
-const iconProject = elementProjects.innerHTML;
-const textProject = "Projetos";
-elementProjects.innerHTML;
-elementProjects.addEventListener("mouseover", () =>{
-    elementProjects.innerText = textProject;
-});
-elementProjects.addEventListener("mouseout", () =>{
-    elementProjects.innerHTML = iconProject;
-});
-
-const iconCredits = elementCredits.innerHTML;
-const textCredits = "Creditos";
-elementCredits.innerHTML;
-elementCredits.addEventListener("mouseover", () =>{
-    elementCredits.innerText = textCredits;
-});
-elementCredits.addEventListener("mouseout", () =>{
-    elementCredits.innerHTML = iconCredits;
-});
+elementToStart.addEventListener("click", () =>{
+    window.scrollTo({top: 0, behavior: "smooth"})
+})
