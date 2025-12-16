@@ -69,8 +69,8 @@ header nav#menu ul li button .fa-whatsapp:hover{
     color: #25D366;
 }
 
-hr#first{
-    margin: 45px 0 45px 0;
+hr{
+    margin: 65px 0 80px 0;
     height: 5px;
     width: 50%;
     transform: translateX(50%);
@@ -129,12 +129,12 @@ main #start img{
 
 main #about{
     margin: 0 10px;
-    border: 1px solid #000;
 }
 
 main #about #profile{
     display: flex;
     align-items: center;
+    margin-bottom: 25px;
 }
 
 main #about #profile h5{
@@ -143,7 +143,14 @@ main #about #profile h5{
 }
 
 main #about #profile img{
-    width: 75px;
+    width: 50px;
     border-radius: 50%;
-    margin-right: 15px;
+    margin-right: 10px;
+}
+
+main #about #contentProfile p{
+    width: 60%;
+    font-size: 1.1rem;
+    text-align: justify;
+    text-justify: inter-word;
 }
