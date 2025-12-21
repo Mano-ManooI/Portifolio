@@ -8,28 +8,30 @@ addEventListener("input", () =>{
     };
 });
 
-function prizeDraw(){
+function configPrizeDraw(){
     if(input.value.trim() === ""){
         return;
     };
 
     let data = input.value.trim();
     data = data.charAt(0).toUpperCase() + data.slice(1).toLowerCase();
-    console.log(data)
 
+    const items = document.getElementById("items");
+    const li = document.createElement("li");
+    li.innerText = data;
+    items.appendChild(li);
 
-
-    input.value = ""
+    input.value = "";
 };
 
 const addData = document.getElementById("addData");
 addData.addEventListener("click", (event) =>{
     event.preventDefault()
 
-    prizeDraw();
+    configPrizeDraw();
 });
 input.addEventListener("keypress", (e) =>{
     if(e.key === "Enter"){
-        prizeDraw();
+        configPrizeDraw();
     };
 });
