@@ -18,8 +18,15 @@ function configPrizeDraw(){
 
     const items = document.getElementById("items");
     const li = document.createElement("li");
+    const buttonRemove = document.createElement("button");
+
     li.innerText = data;
     items.appendChild(li);
+    buttonRemove.innerHTML = `<i class="fa-regular fa-trash-can"></i>`;
+    li.appendChild(buttonRemove);
+    buttonRemove.addEventListener("click", () =>{
+        li.remove();
+    });
 
     input.value = "";
 };
