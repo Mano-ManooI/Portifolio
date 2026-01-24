@@ -20,6 +20,25 @@ html, body{
     text-align: center;
 }
 
+header button{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 15px;
+    background: #ccc;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header button img{
+    width: 55px;
+}
+
 #register{
     display: flex;
     flex-direction: column;
@@ -29,7 +48,7 @@ html, body{
     box-shadow: 0 0 14px rgba(0,0,0,0.14);
 }
 
-#register h1{
+#register h2{
     font-size: 2.3rem;
     margin-bottom: 15px;
 }
@@ -43,7 +62,7 @@ html, body{
     font-weight: bold;
 }
 
-#register button{
+button{
     cursor: pointer;
     font-size: 0.9rem;
 }
@@ -66,4 +85,59 @@ html, body{
 
 #register #enterAccount:hover{
     background: rgb(13, 39, 207)
+}
+
+#popUp{
+    display: flex;
+    flex-direction: column;
+    background: #f2f2f2;
+    padding: 90px 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 14px rgba(0,0,0,0.14);
+    display: none;
+}
+
+#popUp #reloadPage{
+    margin-top: -70px;
+    padding: 5px;
+    width: 40px;
+    font-size: 1.5rem;
+    background: #999;
+    border-radius: 50%;
+}
+
+#popUp #reloadPage:hover{
+    background: #a3a3a3;
+}
+
+#popUp h2{
+    margin: 25px 0 15px 0;
+}
+
+#popUp #accountCopy{
+    background: #f8f8f8;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+#popUp #accountCopy h3{
+    margin-bottom: 5px;
+}
+
+#popUp #accountCopy #buttonCopy{
+    margin: -15% -85% 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #f2f2f2;
+    color: rgb(15, 168, 15);
+    border-radius: 50%;
+}
+
+#popUp #accountCopy #buttonCopy .fa-regular, .fa-copy{
+    color: red;
+}
+
+#popUp #accountCopy #buttonCopy:hover{
+    background: #e9e5e5;
 }
