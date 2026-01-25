@@ -6,6 +6,8 @@
     background: none;
     border: none;
     font-family: "Roboto", serif;
+    font-weight: bolder;
+    transition: all 0.5s;
 }
 
 html, body{
@@ -17,59 +19,55 @@ html, body{
 }
 
 main{
-    background: #7c7b7b;
-    padding: 35px 25px 25px 25px;
+    padding: 25px;
+    background: #888;
     border-radius: 25px;
+    box-shadow: 0 0 8px rgba(0,0,0.14);
 }
 
 span#visor{
-    background: #f9f9f9;
-    border: 1px solid #777;
-    border-radius: 15px;
-    padding: 15px 20px;
-    font-size: 2rem;
-    font-family: "Rajdhani", sans-serif;
-    text-align: right;
     display: block;
-}
-
-#buttonsSection{
-    margin-top: 21px;
-    background: #f4f4f4;
+    box-sizing: border-box;
+    padding: 10px 25px;
+    margin-bottom: 15px;
+    background: #fff;
     border: 1px solid #777;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    border-radius: 25px;
+    font-size: 2rem;
+    text-align: right;
 }
 
-#buttonsSection button{
+button{
+    padding: 5px 10px;
+    margin: 3px;
+    width: 55px;
+    height: 55px;
     cursor: pointer;
+    border-radius: 8px;
     font-size: 1.5rem;
     color: #fff;
-    font-weight: bold;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 15px;
 }
 
-#buttonsSection .specialCharacter1{
-    background: #f12f;
+#buttonsSection .type1{
+    background: #f00;
 }
 
-#buttonsSection .specialCharacter2{
-    background: #3b3b3b;
+#buttonsSection .type2{
+    background: #4545;
 }
 
-#buttonsSection .specialCharacter3{
-    background: #1437d3;
+#buttonsSection .type3{
+    background: rgb(0, 143, 199);
 }
 
-#buttonsSection .specialCharacter4{
-    background: #0aa11e;
+#buttonsSection .type1:hover{
+    background: rgb(224, 6, 6);
 }
 
-#buttonsSection .number{
-    background: #3b3b3b;
+#buttonsSection .type2:hover{
+    background: rgba(37, 44, 37, 0.37);
+}
+
+#buttonsSection .type3:hover{
+    background: rgb(3, 119, 165);
 }
