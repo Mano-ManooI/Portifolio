@@ -8,6 +8,7 @@
     transition: all 0.5s;
     font-family: "Poppins", serif;
     box-sizing: border-box;
+    transition: all 0.5s;
 }
 
 body, html{
@@ -15,10 +16,60 @@ body, html{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
 }
 
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#popUp{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 2000;
+}
+
+#popUp button#closePopUp{
+    color: #f00;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    margin: 0 0 15px 0;
+}
+
+#popUp button#closePopUp:hover{
+    color: rgb(223, 16, 16);
+}
+
+#popUp h3#titleAbout{
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1bad9c;
+    font-size: 1.5rem;
+}
+
+#popUp p{
+    text-align: justify;
+}
+
+#popUp p strong{
+    color: #168bda;
+}
+
+#popUp p b{
+    color: #f73412;
+}
+
 header{
+    top: 0px;
     position: fixed;
     width: 75%;
     height: 95px;
@@ -180,7 +231,7 @@ hr#about{
 }
 
 footer{
-    background: red;
+
     width: 100%;
     text-align: center;
     padding: 20px 0;

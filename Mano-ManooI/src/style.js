@@ -28,7 +28,14 @@ window.addEventListener("scroll", () =>{
 });
 
 elementToStart.addEventListener("click", () =>{
-    window.scrollTo({top: 0, behavior: "smooth"});
+    if(window.scrollY === 0){
+        window.scrollTo({top: 15, behavior: "smooth"});
+        setTimeout(() =>{
+            window.scrollTo({top: 0, behavior: "smooth"});
+        }, 100);
+    }else{
+        window.scrollTo({top: 0, behavior: "smooth"});
+    };
 });
 elementToAbout.addEventListener("click", () =>{
     window.scrollTo({top: 460, behavior: "smooth"});

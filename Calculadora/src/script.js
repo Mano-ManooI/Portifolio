@@ -14,8 +14,12 @@ function confgButtons(button){
         }else{
             visor.innerText = clickUser;
         };
-    }else if(clickUser === ""){
-        
+    }else if(clickUser === "←"){
+        if(nowValue === "0" || nowValue === ""){
+            visor.innerText = "0";
+        }else{
+            visor.innerText = visor.innerText.slice(0, -1);
+        };
 
     }else{
         visor.innerText += clickUser
