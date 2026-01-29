@@ -7,8 +7,8 @@ const elementToContact = document.getElementById("toContact");
 const textStart = "Início";
 const textAbout = "Sobre";
 const textContact = "Contato";
-const iconStart = `<i class="fa-solid fa-house"></i>`;
-const iconAbout = `<i class="fa-solid fa-circle-info"></i>`;
+const iconStart = `<i class="fa-regular fa-house"></i>`;
+const iconAbout = `<i class="fa-solid fa-info"></i>`;
 const iconContact = `<i class="fa-brands fa-whatsapp"></i>`;
 
 window.addEventListener("scroll", () =>{

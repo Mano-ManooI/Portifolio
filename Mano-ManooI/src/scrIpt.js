@@ -23,4 +23,19 @@ window.addEventListener("DOMContentLoaded", () =>{
     buttonClosePopUp.addEventListener("click", () =>{
         closePopUp();
     });
+
+    const linkedinButton = document.getElementById("linkedin")
+    linkedinButton.addEventListener("click", () =>{;
+        open("https://www.linkedin.com/in/manoel-neto-279231262/")
+    });
+
+    const instaButton = document.getElementById("instagram")
+    instaButton.addEventListener("click", () =>{;
+        open("https://www.instagram.com/manooi_10/")
+    });
+
+    const gitHub = document.getElementById("github")
+    gitHub.addEventListener("click", () =>{;
+        open("https://github.com/Mano-ManooI")
+    });
 });

@@ -47,7 +47,7 @@ button{
 }
 
 #popUp button#closePopUp:hover{
-    color: rgb(223, 16, 16);
+    color: rgb(207, 5, 5);
 }
 
 #popUp h3#titleAbout{
@@ -102,24 +102,21 @@ header nav#menu ul li button{
     cursor: pointer;
 }
 
-header nav#menu ul li button .fa-solid, .fa-brands{
+header nav#menu ul li button .fa-solid, .fa-brands, .fa-regular{
     font-size: 1.7rem;
 }
 
 header nav#menu ul li button .fa-house:hover{
     color: #0080bb;
+
 }
 
-header nav#menu ul li button .fa-circle-info:hover{
+header nav#menu ul li button .fa-info:hover{
     color: #e98400;
 }
 
-header nav#menu ul li button .fa-briefcase:hover{
-    color: #f22743;
-}
-
 header nav#menu ul li button .fa-whatsapp:hover{
-    color: #25D366;
+    color: #09a743;
 }
 
 hr{
@@ -137,7 +134,6 @@ hr#start-about{
     transform: translateX(50%);
     font-weight: bolder;
     background: #333;
-    border: none;
     border-radius: 5px;
 }
 
@@ -170,7 +166,6 @@ main #start div p{
 
 main #start div button#findOutMore{
     background: #045fff;
-    border: none;
     border-radius: 10px;
     margin: 45px 0;
     padding: 15px 25px;
@@ -223,12 +218,54 @@ hr#about{
     transform: translateX(93%);
     font-weight: bolder;
     background: #db5800;
-    border: none;
     border-radius: 5px;
 }
 
 #contact{
-    margin-top: 250px;
+    padding: 25px 0;
+}
+
+#contact #socialMedia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 20px;
+    padding: 15px 5px 10px 5px;
+    width: 7%;
+    background: #f2f2f2;
+    border-radius: 25px;
+}
+
+#contact #socialMedia button{
+    display: flex;
+    margin-bottom: 10px;
+    padding: 8px 3px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    transition: ease-in 0.4s;
+}
+
+#contact #socialMedia button:hover{
+    background: #ddd;
+}
+
+#contact #socialMedia button .fa-brands{
+    font-size: 2.5rem;
+}
+
+#contact #socialMedia button .fa-linkedin{
+    color: #0A66C2;
+}
+
+#contact #socialMedia button .fa-square-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#contact #socialMedia button .fa-github{
+    color: #000;
 }
 
 footer{
