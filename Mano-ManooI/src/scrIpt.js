@@ -24,18 +24,22 @@ window.addEventListener("DOMContentLoaded", () =>{
         closePopUp();
     });
 
-    const linkedinButton = document.getElementById("linkedin")
-    linkedinButton.addEventListener("click", () =>{;
-        open("https://www.linkedin.com/in/manoel-neto-279231262/")
-    });
+    const linkedinButton = document.querySelectorAll(".linkedin");
+    linkedinButton.forEach((linkedin) =>{
+        linkedin.addEventListener("click", () => {
+            open("https://www.linkedin.com/in/manoel-neto-279231262/")
+        });
+    })
 
     const instaButton = document.getElementById("instagram")
     instaButton.addEventListener("click", () =>{;
         open("https://www.instagram.com/manooi_10/")
     });
 
-    const gitHub = document.getElementById("github")
-    gitHub.addEventListener("click", () =>{;
-        open("https://github.com/Mano-ManooI")
+    const gitHubButton = document.querySelectorAll(".github");
+    gitHubButton.forEach((gitHub) =>{
+        gitHub.addEventListener("click", () =>{;
+            open("https://github.com/Mano-ManooI")
+        });
     });
 });
