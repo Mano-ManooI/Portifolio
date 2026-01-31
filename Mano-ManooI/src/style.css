@@ -1,23 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     outline: none;
-    list-style: none;
+    font-family: "Montserrat", serif;
     transition: all 0.5s;
-    font-family: "Poppins", serif;
-    box-sizing: border-box;
-    transition: all 0.5s;
-}
-
-body, html{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
 }
 
 button{
@@ -26,252 +14,81 @@ button{
     cursor: pointer;
 }
 
-#popUp{
-    display: block;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    z-index: 2000;
-}
-
-#popUp button#closePopUp{
-    color: #f00;
-    border-radius: 50%;
-    font-size: 1.8rem;
-    margin-right: 15px;
-}
-
-#popUp button#closePopUp:hover{
-    color: rgb(207, 5, 5);
-}
-
-#popUp h3#titleAbout{
-    margin-bottom: 25px;
-    text-align: center;
-    color: #1bad9c;
-    font-size: 1.5rem;
-}
-
-#popUp p{
-    text-align: justify;
-}
-
-#popUp p strong{
-    color: #168bda;
-}
-
-#popUp p b{
-    color: #f73412;
+button.darkMode{
+    color: #fff;
 }
 
 header{
-    top: 0px;
     position: fixed;
-    width: 75%;
+    width: 100%;
     height: 95px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50px;
-    margin: 15px 0 0 0;
-    background: rgb(235, 235, 255);
-    z-index: 1000;
 }
 
-header nav#menu ul{
-    display: flex;
-}
-
-header nav#menu ul li{
-    background: none;
-    padding: 25px;
-}
-
-header nav#menu ul li button{
-    background: none;
-    font-weight: bold;
-    font-family: "Roboto", serif;
-    border: none;
-    font-size: 1.3rem;
-    color: #353535;
-    cursor: pointer;
-}
-
-header nav#menu ul li button .fa-solid, .fa-brands, .fa-regular{
-    font-size: 1.7rem;
-}
-
-header nav#menu ul li button .fa-house:hover{
-    color: #0080bb;
-
-}
-
-header nav#menu ul li button .fa-info:hover{
-    color: #e98400;
-}
-
-header nav#menu ul li button .fa-whatsapp:hover{
-    color: #09a743;
-}
-
-hr{
-    height: 5px;
-    transform: translateX(50%);
-    font-weight: bolder;
-    border: none;
-    border-radius: 5px;
-}
-
-hr#start-about{
-    margin: 65px 0 80px 0;
-    height: 5px;
-    width: 50%;
-    transform: translateX(50%);
-    font-weight: bolder;
-    background: #333;
-    border-radius: 5px;
-}
-
-main{
-    width: 100%;
-    flex: none;
-}
-
-main #start{
-    background: rgb(235, 235, 255);
-    border-radius: 75px;
-    display: flex;
-}
-
-main #start div{
-    margin: 160px 35px 0 35px;
-}
-
-main #start div h2{
-    margin: 15px 0;
-    font-size: 1.8rem;
-}
-
-main #start div p{
-    font-size: 1.05rem;
-    font-weight: 600;
-    width: 835px;
-    margin-left: 25px;
-}
-
-main #start #linksContact button#findOutMore{
-    background: #045fff;
-    border-radius: 10px;
-    margin: 45px 0;
-    padding: 15px 25px;
+header.darkMode{
+    background: #000;
     color: #fff;
-    font-weight: bold;
-    font-family: "Roboto", serif;
-    font-size: 1.05rem;
-    cursor: pointer;
 }
 
-button .fa-linkedin{
-    color: #0A66C2;
-}
-
-button .fa-github{
+header.lightMode{
+    background: #fff;
     color: #000;
 }
 
-main #start img{
-    top: 40px;
-    width: 450px;
+header #creditsManoManooI{
     position: absolute;
-    right: 25px;
+    left: 40px;
 }
 
-main #about{
-    margin: 0 5px;
+header #creditsManoManooI h5{
+    font-weight: bold;
+    font-size: 1.15rem;
 }
 
-main #about #contentAbout{
+header #creditsManoManooI h6{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+header #navigation{
     display: flex;
-    justify-content: center;
-    margin: 0 40px;
-    padding: 5px;
+    gap: 80px;
 }
 
-main #about #contentAbout img{
-    width: 200px;
-    height: 200px;    
-    border-radius: 50%;
+header #navigation button{
+    font-size: 1.35rem;
+    font-weight: bold
 }
 
-main #about #contentAbout p{
-    font-size: 1.1rem;
-    text-align: justify;
-    text-justify: inter-word;
-    margin-left: 100px;
+header #toggleColor{
+    position: absolute;
+    right: 40px;
+    padding: 5px 35px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: ease-in 0.2;
 }
 
-main #about #contentAbout p strong{
-    color: #e76400;
+header #toggleColor.darkMode{
+    background: #0018ff;
+    color: #fff;
 }
 
-hr#about{
-    margin: 5px 0 0 0;
-    height: 3px;
-    width: 50%;
-    transform: translateX(93%);
-    font-weight: bolder;
-    background: #db5800;
-    border-radius: 5px;
+header #toggleColor.lightMode{
+    background: #ffe600;
+    color: #000;
 }
 
-#contact{
-    padding: 25px 0;
+
+header #toggleColor.darkMode:hover{
+    background: #e0e0e0;
+    color: #f8aa00;
 }
 
-#contact #socialMedia{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 15px 20px;
-    padding: 15px 5px 10px 5px;
-    width: 7%;
-    background: #f2f2f2;
-    border-radius: 25px;
-}
-
-#contact #socialMedia button{
-    display: flex;
-    margin-bottom: 10px;
-    padding: 8px 3px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    transition: ease-in 0.4s;
-}
-
-#contact #socialMedia button:hover{
-    background: #ddd;
-}
-
-#contact #socialMedia button .fa-brands{
-    font-size: 2.5rem;
-}
-
-#contact #socialMedia button .fa-square-instagram {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-footer{
-
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: auto;
+header #toggleColor.lightMode:hover{
+    background: #1f1f1f;
+    color: #949494;
 }
