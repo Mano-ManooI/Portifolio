@@ -18,10 +18,10 @@ function toggleColor(){
         };
     });
 
-    if(toggleColorButton.innerHTML === `<i class="fa-regular fa-sun"></i>`){
-        toggleColorButton.innerHTML = `<i class="fa-regular fa-moon"></i>`;
-    }else{
+    if(toggleColorButton.innerHTML === `<i class="fa-regular fa-moon"></i>`){
         toggleColorButton.innerHTML = `<i class="fa-regular fa-sun"></i>`;
+    }else{
+        toggleColorButton.innerHTML = `<i class="fa-regular fa-moon"></i>`;
     };
 };
 
