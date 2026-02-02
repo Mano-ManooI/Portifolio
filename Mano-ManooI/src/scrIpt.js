@@ -1,0 +1,38 @@
+const toStart = document.getElementById("toStart");
+const toAbout = document.getElementById("toAbout");
+const toContact = document.getElementById("toContact");
+
+window.addEventListener("DOMContentLoaded", () =>{
+    toStart.addEventListener("click", () =>{
+        if (window.scrollY === 0) {
+            window.scrollTo({top: 1, behavior: "smooth"});
+        };
+        setTimeout(() =>{
+            window.scrollTo({top: 0, behavior: "smooth"});
+        }, 100);
+    });
+
+    const toTalkButton = document.querySelectorAll("#toTalk");
+    toTalkButton.forEach((toTalk) =>{
+        toTalk.addEventListener("click", () => {
+            const phoneNumber = "5579998801174";
+            const message = encodeURIComponent("Olá! Tudo bem? Gostaria de conversar com você sobre: ");
+            const ulr = `https://wa.me/${phoneNumber}?text=${message}`;
+            open(ulr);
+        });
+    });
+
+    const atLinkedinButton = document.querySelectorAll("#atLinkedin");
+    atLinkedinButton.forEach((atLinkedin) =>{
+        atLinkedin.addEventListener("click", () =>[
+            open("https://www.linkedin.com/in/manoel-neto-279231262/"),
+        ]);
+    });
+
+    const atGithubButton = document.querySelectorAll("#atGithub");
+    atGithubButton.forEach((atGitHub) =>{
+        atGitHub.addEventListener("click", () =>[
+            open("https://github.com/Mano-ManooI"),
+        ]);
+    });
+});
