@@ -33,7 +33,7 @@ function toggleColor(){
         imgElement.src = gradient1;
     }else{
         imgElement.src = gradient2;
-    }
+    };
 };
 
 window.addEventListener("DOMContentLoaded", () =>{

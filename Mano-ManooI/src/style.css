@@ -41,7 +41,7 @@ header{
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 10px rgba(0,0,0,0.10);
-    z-index: 1000;
+    z-index: 2000;
 }
 
 header.darkMode{
@@ -181,6 +181,14 @@ main #start #findOutMore.lightMode button#toTalk{
     background: #ff0;
 }
 
+main #start #findOutMore.darkMode button#toTalk:hover{
+    background: rgb(13, 13, 199);
+}
+
+main #start #findOutMore.lightMode button#toTalk:hover{
+    background: rgb(226, 226, 5);
+}
+
 main #start #findOutMore i{
     padding: 8px 5px;
     margin-left: 10px;
@@ -205,4 +213,13 @@ main #start #findOutMore i.fa-linkedin-in:hover{
 main #start #findOutMore i.fa-github:hover{
     color: #fff;
     background: #5f6266;
+}
+
+main #about{
+    margin-top: 550px;
+    background: red;
+}
+
+main #about img{
+    width: 250px;
 }

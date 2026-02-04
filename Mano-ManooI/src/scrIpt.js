@@ -4,12 +4,13 @@ const toContact = document.getElementById("toContact");
 
 window.addEventListener("DOMContentLoaded", () =>{
     toStart.addEventListener("click", () =>{
-        if (window.scrollY === 0) {
-            window.scrollTo({top: 1, behavior: "smooth"});
-        };
-        setTimeout(() =>{
-            window.scrollTo({top: 0, behavior: "smooth"});
-        }, 100);
+        window.scrollTo({top: 0, behavior: "smooth"});
+    });
+    toAbout.addEventListener("click", () =>{
+        window.scrollTo({top: 500, behavior: "smooth"});
+    });
+    toContact.addEventListener("click", () =>{
+        window.scrollTo({top: 0, behavior: "smooth"});
     });
 
     const toTalkButton = document.querySelectorAll("#toTalk");
