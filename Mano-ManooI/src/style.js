@@ -25,15 +25,28 @@ function toggleColor(){
     };
 
     const body = document.querySelector("body")
-    const imgElement = document.querySelector("main #start img");
-    const gradient1 = "./img/gradiente1.png";
-    const gradient2 = "./img/gradiente2.png";
+    const imgElement1 = document.querySelectorAll("main #start img.gradient, footer img.gradient");
+    const imgElement2 = document.querySelectorAll("footer img.circle");
+    const gradient1 = "./img/gradient1.png";
+    const gradient2 = "./img/gradient2.png";
+    const circle1 = "./img/circle1.png";
+    const circle2 = "./img/circle2.png";
 
-    if(body.classList.contains(darkMode)){
-        imgElement.src = gradient1;
-    }else{
-        imgElement.src = gradient2;
-    };
+    imgElement1.forEach((img) =>{
+        if (body.classList.contains(darkMode)) {
+            img.src = gradient1;
+        } else {
+            img.src = gradient2;
+        };
+    });
+
+    imgElement2.forEach((img) =>{
+        if (body.classList.contains(darkMode)) {
+            img.src = circle1;
+        } else {
+            img.src = circle2;
+        };
+    });
 };
 
 window.addEventListener("DOMContentLoaded", () =>{

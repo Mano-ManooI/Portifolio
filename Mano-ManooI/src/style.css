@@ -223,3 +223,78 @@ main #about{
 main #about img{
     width: 250px;
 }
+
+footer img.gradient{
+    width: 170px;
+    opacity: 80%;
+}
+
+footer img#img1Gradient{
+    position: absolute;
+    left: 10%;
+}
+
+footer img.circle{
+    width: 100px;
+}
+
+footer h1, footer p{
+    text-align: center;
+}
+
+footer h1{
+    font-size: 6rem;
+}
+
+footer p{
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+footer button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 30px;
+    margin-top: 150px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+footer.darkMode button{
+    background: #00f;
+}
+
+footer.lightMode button{
+    background: #ff0;
+}
+
+footer.darkMode button:hover{
+    background: rgb(13, 13, 199);
+}
+
+footer.lightMode button:hover{
+    background: rgb(226, 226, 5);
+}
+
+footer #urlContact{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 250px 0;
+    padding: 15px 0;
+    border: 1.5px solid #f7f3f3;
+    border-radius: 25px;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer #urlContact span{
+    margin: 0 25px;
+}
