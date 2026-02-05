@@ -224,6 +224,12 @@ main #about img{
     width: 250px;
 }
 
+footer{
+    position: relative;
+    margin-bottom: 150px;
+    padding: 120px 0;
+}
+
 footer img.gradient{
     width: 170px;
     opacity: 80%;
@@ -231,7 +237,28 @@ footer img.gradient{
 
 footer img#img1Gradient{
     position: absolute;
-    left: 10%;
+    bottom: 90px;
+    left: 2%;
+}
+
+footer img#img2Gradient{
+    transform: rotate(180deg);
+    position: absolute;
+    right: 2%;
+    bottom: -140px;
+}
+
+footer img#img1Circle{
+    position: absolute;
+    bottom: 120px;
+    right: 2%;
+}
+
+footer img#img2Circle{
+    transform: rotate(180deg);
+    position: absolute;
+    left: 2%;
+    bottom: -120px;
 }
 
 footer img.circle{
@@ -288,11 +315,19 @@ footer #urlContact{
     transform: translateX(-50%);
     margin: 250px 0;
     padding: 15px 0;
-    border: 1.5px solid #f7f3f3;
     border-radius: 25px;
     width: 60%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+footer.darkMode #urlContact{
+    border: 1.5px solid #f7f3f3;
+}
+
+footer.lightMode #urlContact{
+    border: 1.5px solid #333333;
 }
 
 footer #urlContact span{

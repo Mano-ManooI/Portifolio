@@ -1,6 +1,7 @@
 const toStart = document.getElementById("toStart");
 const toAbout = document.getElementById("toAbout");
 const toContact = document.getElementById("toContact");
+const toThanks = document.getElementById("toThanks");
 
 window.addEventListener("DOMContentLoaded", () =>{
     toStart.addEventListener("click", () =>{
@@ -11,6 +12,9 @@ window.addEventListener("DOMContentLoaded", () =>{
     });
     toContact.addEventListener("click", () =>{
         window.scrollTo({top: 0, behavior: "smooth"});
+    });
+    toThanks.addEventListener("click", () =>{
+        window.scrollTo({top: 860, behavior: "smooth"});
     });
 
     const toTalkButton = document.querySelectorAll("#toTalk");
