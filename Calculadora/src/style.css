@@ -35,6 +35,7 @@ span#visor{
     border-radius: 25px;
     font-size: 2rem;
     text-align: right;
+    cursor: default;
 }
 
 button{
