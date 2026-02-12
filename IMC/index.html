@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./src/style.css">
     <link rel="shortcut icon" href="./img/icon.webp" type="image/webp">
     <title>IMC - Mano-ManooI</title>
 </head>
 <body>
     <main>
-        
+        <img src="./img/logo.webp" draggable="false">
         <div id="page1">
             <h1>Calculadora de IMC</h1>
             <input type="text" id="height" placeholder="Altura (cm)">
             <input type="text" id="weight" placeholder="Peso (kg)">
-            <button id="calcButton">Calcular</button>
+            <div id="buttons">
+                <button id="cleanInput"><i class="fa-solid fa-trash-can"></i></button>
+                <button id="calcButton">Calcular</button>
+            </div>
         </div>
         <div id="page2">
             <p id="loading">Calculando</p>
             <div id="resultPage">
+                <button id="backButton"><i class="fa-solid fa-arrow-left"></i></button>
                 <h1>Resultado do IMC</h1>
                 <p id="result"></p>
             </div>

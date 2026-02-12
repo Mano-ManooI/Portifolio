@@ -5,6 +5,7 @@
     padding: 0;
     outline: none;
     font-family: 'Roboto', sans-serif;
+    transition: all 0.5s ease;
 }
 
 html, body{
@@ -35,6 +36,22 @@ button{
     cursor: pointer;
     border: none;
     font-weight: bold;
+    background: none;
+}
+
+h1{
+    cursor: default;
+}
+
+main img{
+    width: 65px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+}
+main button#linkToCode:hover{
+    opacity: 75%;
 }
 
 main div{
@@ -54,13 +71,41 @@ main div#page1 h1{
     margin-bottom: 20px;
 }
 
-main div#page1 button{
+main div#page1 #buttons{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background: none;
+    box-shadow: none;
+    gap: 10px;
+}
+
+main div#page1 #buttons button#calcButton{
     height: 45px;
+    width: 85%;
     margin-top: 15px;
     border-radius: 8px;
     background: #0f66f6;
     color: #fff;
     font-size: 1.2rem;
+}
+
+main div#page1 #buttons button#calcButton:hover{
+    background: #0c5ee2;
+}
+
+main div#page1 #buttons button#cleanInput{
+    height: 45px;
+    width: 15%;
+    margin-top: 15px;
+    border-radius: 8px;
+    background: #f60f0f;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+main div#page1 #buttons button#cleanInput:hover{
+    background: #e20c0c;
 }
 
 main div#page2{
@@ -78,4 +123,33 @@ main div#page2 #resultPage{
     background: none;
     box-shadow: none;
     display: none;
+}
+
+main div#page2 #resultPage button#backButton{
+    padding: 10px 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 50%;
+    background: #2c2c2c;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+
+
+main div#page2 #resultPage p{
+    cursor: default;
+    padding: 10px 25px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: #f0f0f0;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+}
+
+main div#page2 #resultPage p:hover{
+    transform: scale(1.05);
 }
