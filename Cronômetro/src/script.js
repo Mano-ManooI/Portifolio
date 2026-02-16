@@ -2,29 +2,6 @@ const hours = document.getElementById('hours');
 const minutes = document.getElementById('minutes');
 const seconds = document.getElementById('seconds');
 
-function config(){
-    const disactiveClass = 'disactive';
-    const activeClass = 'active';
-
-    const hoursValue = parseInt(hours.textContent);
-    const minutesValue = parseInt(minutes.textContent);
-    const secondsValue = parseInt(seconds.textContent);
-
-    if(hoursValue !== "00"){
-        hours.classList.remove(disactiveClass);
-        hours.classList.add(activeClass);
-    };
-    
-    if(minutesValue !== "00"){
-        minutes.classList.remove(disactiveClass);
-        minutes.classList.add(activeClass);
-    };
-    if(secondsValue !== "00"){
-        seconds.classList.remove(disactiveClass);
-        seconds.classList.add(activeClass);
-    };
-};
-
 function updateTime(){
     let h = parseInt(hours.textContent);
     let m = parseInt(minutes.textContent);
@@ -41,30 +18,41 @@ function updateTime(){
             h++;
         };
     };
-    hours.textContent = h.toString().padStart(2, '0');
-    minutes.textContent = m.toString().padStart(2, '0');
+    hours.textContent = h.toString().padStart(2, '0') + " :";
+    minutes.textContent = m.toString().padStart(2, '0') + " :";
     seconds.textContent = s.toString().padStart(2, '0');
 };
 
-function resetTime(){
-    window.location.reload();
-};
-
 window.addEventListener("DOMContentLoaded", () =>{
-    const startButton = document.getElementById('button1');
-    startButton.addEventListener('click', () =>{
-        config();
-        updateTime();
-        const timer = setInterval(updateTime, 1000);
+    const button1 = document.getElementById('button1');
+    const button2 = document.getElementById('button2');
+    const button3 = document.getElementById('button3');
+    const button4 = document.getElementById('button4');
+    let timer;
 
-        const button2 = document.getElementById('button2');
-        button2.addEventListener('click', () => {
-            clearInterval(timer);
-        });
+    button1.addEventListener('click', () =>{
+        button1.style.display = 'none';
+        button2.style.display = 'inline-block';
+        button4.style.display = 'inline-block';
 
-        const resetButton = document.getElementById('button3');
-        resetButton.addEventListener('click', () => {
-            resetTime();
-        });
+        timer = setInterval(updateTime, 1000);
+    });
+
+    button2.addEventListener("click", () =>{
+        button2.style.display = 'none';
+        button3.style.display = 'inline-block';
+
+        clearInterval(timer);
+    });
+
+    button3.addEventListener("click", () =>{
+        button3.style.display = 'none';
+        button2.style.display = 'inline-block';
+
+        timer = setInterval(updateTime, 1000);
+    });
+
+    button4.addEventListener('click', () => {
+        window.location.reload();
     });
 });

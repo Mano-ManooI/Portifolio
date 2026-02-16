@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Chorasmian&family=Orbitron:wght@400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: "Noto Sans Chorasmian", sans-serif;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+html, body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    padding: 25px 45px;
+    background: #1e1e1e;
+    border-radius: 50px;
+    text-align: center;
+}
+
+main img{
+    width: 90px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+main #data{
+    margin-bottom: 15px;
+}
+
+main h1{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+main span{
+    cursor: default;
+    font-family: "Orbitron", sans-serif;
+    font-size: 3rem;
+}
+
+main #buttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+main button{
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+}
+
+main button:hover{
+    transform: scale(1.2);
+}
+
+#button2{
+    display: none;
+}
+#button3{
+    display: none;
+}
+#button4{
+    display: none;
+}
