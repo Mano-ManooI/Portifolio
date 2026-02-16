@@ -44,11 +44,10 @@ h1{
 }
 
 main img{
-    width: 65px;
+    width: 90px;
     position: absolute;
-    top: 20px;
     right: 20px;
-    border-radius: 50%;
+    top: 20px;
 }
 main button#linkToCode:hover{
     opacity: 75%;
