@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Chorasmian&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    font-family: "Noto-Sans", sans-serif;
+    transition: all 0.5s ease;
+}
+
+html, body{
+    scroll-behavior: smooth;
+    background: #f1f0f1f0;
+}
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: #f0f1f0f1;
+}
+
+header img#logo{
+    width: 100px;
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+}
+
+@keyframes pulsar{
+    0%{
+        transform: scale(1);
+    }
+
+    70%{
+        transform: scale(1.05);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+header img#logo:hover{
+    animation: pulsar 0.5s infinite;
+}
+
+header nav#pcMenu ul{
+    display: flex;
+    gap: 45px;
+}
+
+header nav#pcMenu ul li button{
+    font-size: 1.4rem;
+    font-weight: 750;
+}
+
+header nav#pcMenu ul li button.styleActive{
+    border-bottom: 3.5px solid #FFC300;
+}
+
+header button.order{
+    padding: 10px 15px;
+    position: absolute;
+    right: 25px;
+    border-radius: 30px 10px;
+    background: #FFC300;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    color: #131312;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header button.order:hover{
+    background: #ffc400d5;
+}
+
+header nav#mobileMenu ul{
+    display: none;
+    gap: 25px;
+    margin-right: 20px;
+}
+
+header nav#mobileMenu ul li button.styleActive{
+    border-bottom: 3.5px solid #FFC300;
+}
+
+@media screen and (max-width: 600px){
+    header{
+        height: 55px;
+        justify-content: space-between;
+    }
+
+    header img#logo{
+        width: 50px;
+    }
+
+    header button.order{
+        display: none;
+    }
+
+    header nav#pcMenu ul{
+        display: none;
+    }
+
+    header nav#mobileMenu ul{
+        display: flex;
+    }
+
+}
