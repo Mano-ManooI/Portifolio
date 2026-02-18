@@ -22,13 +22,15 @@ button{
 
 header{
     position: fixed;
+    top: 0;
     width: 100%;
     height: 95px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    background: #f0f1f0f1;
+    background: #f6f8f6;
+    z-index: 1000;
 }
 
 header img#logo{
@@ -53,7 +55,7 @@ header img#logo{
 }
 
 header img#logo:hover{
-    animation: pulsar 0.5s infinite;
+    animation: pulsar 1s infinite;
 }
 
 header nav#pcMenu ul{
@@ -70,7 +72,7 @@ header nav#pcMenu ul li button.styleActive{
     border-bottom: 3.5px solid #FFC300;
 }
 
-header button.order{
+header button#order{
     padding: 10px 15px;
     position: absolute;
     right: 25px;
@@ -82,7 +84,7 @@ header button.order{
     font-weight: 600;
 }
 
-header button.order:hover{
+header button#order:hover{
     background: #ffc400d5;
 }
 
@@ -96,6 +98,11 @@ header nav#mobileMenu ul li button.styleActive{
     border-bottom: 3.5px solid #FFC300;
 }
 
+main{
+    margin-top: 95px;
+    min-height: calc(100vh - 95px);
+}
+
 @media screen and (max-width: 600px){
     header{
         height: 55px;
@@ -106,7 +113,7 @@ header nav#mobileMenu ul li button.styleActive{
         width: 50px;
     }
 
-    header button.order{
+    header button#order{
         display: none;
     }
 
