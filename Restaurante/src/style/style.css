@@ -33,13 +33,6 @@ header{
     z-index: 1000;
 }
 
-header img#logo{
-    width: 100px;
-    position: absolute;
-    left: 10px;
-    cursor: pointer;
-}
-
 @keyframes pulsar{
     0%{
         transform: scale(1);
@@ -54,7 +47,10 @@ header img#logo{
     }
 }
 
-header img#logo:hover{
+header img#logo{
+    width: 100px;
+    position: absolute;
+    left: 10px;
     animation: pulsar 1s infinite;
 }
 
@@ -68,11 +64,7 @@ header nav#pcMenu ul li button{
     font-weight: 750;
 }
 
-header nav#pcMenu ul li button.styleActive{
-    border-bottom: 3.5px solid #FFC300;
-}
-
-header button#order{
+header button.order{
     padding: 10px 15px;
     position: absolute;
     right: 25px;
@@ -84,7 +76,7 @@ header button#order{
     font-weight: 600;
 }
 
-header button#order:hover{
+header button.order:hover{
     background: #ffc400d5;
 }
 
@@ -103,6 +95,63 @@ main{
     min-height: calc(100vh - 95px);
 }
 
+main #start{
+    padding: 0 35px;
+    margin-top: 200px;
+}
+
+main #start #title{
+    cursor: default;
+    width: 50%;
+}
+
+main #start #title h2{
+    font-size: 2rem;
+    color: #2b2101;
+}
+
+main #start #title h2 strong{
+    color: #F5A858;
+}
+
+main #start #title p{
+    width: 90%;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+main #start #forOrders{
+    margin-top: 35px;
+    display: flex;
+    gap: 20px;
+}
+
+main #start #forOrders button{
+    padding: 10px 15px;
+    background-color: #FECD29;
+    color: #131312;
+    box-shadow: 0 0 12px 4px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease-in;
+}
+
+main #start #forOrders button:hover{
+    box-shadow: 0 0 12px 8px rgba(0,0,0,0.1);
+}
+
+main #start #forOrders button.order{
+    border-radius: 10px 30px;
+}
+
+main #start #forOrders button#contact i{
+    padding: 5px;
+    border-radius: 5px;
+    background: #19cf10;
+    color: #f4f4f4;
+}
+
 @media screen and (max-width: 600px){
     header{
         height: 55px;
@@ -113,7 +162,7 @@ main{
         width: 50px;
     }
 
-    header button#order{
+    header button.order{
         display: none;
     }
 
