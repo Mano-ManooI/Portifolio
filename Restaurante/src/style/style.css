@@ -22,14 +22,16 @@ button{
 
 header{
     position: fixed;
-    top: 0;
-    width: 100%;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
     height: 95px;
     display: flex;
-    justify-content: center;
     align-items: center;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     background: #f6f8f6;
+    border-radius: 50px;
     z-index: 1000;
 }
 
@@ -54,55 +56,62 @@ header img#logo{
     animation: pulsar 1s infinite;
 }
 
-header nav#pcMenu ul{
-    display: flex;
-    gap: 45px;
-}
-
-header nav#pcMenu ul li button{
-    font-size: 1.4rem;
-    font-weight: 750;
-}
-
-header button.order{
-    padding: 10px 15px;
+header nav#menu ul{
     position: absolute;
     right: 25px;
-    border-radius: 30px 10px;
-    background: #FFC300;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+header nav#menu ul li button{
+    font-size: 1.3rem;
     color: #131312;
-    font-size: 1rem;
     font-weight: 600;
-}
-
-header button.order:hover{
-    background: #ffc400d5;
-}
-
-header nav#mobileMenu ul{
-    display: none;
-    gap: 25px;
-    margin-right: 20px;
-}
-
-header nav#mobileMenu ul li button.styleActive{
-    border-bottom: 3.5px solid #FFC300;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 main{
-    margin-top: 95px;
-    min-height: calc(100vh - 95px);
+    margin-top: 105px;
+    min-height: calc(100vh - 105px);
 }
 
 main #start{
-    padding: 0 35px;
-    margin-top: 200px;
+    margin-top: 220px;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+main #start #banner{
+    position: absolute;
+    top: 150px;
+    right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main #start #banner #shape{
+    width: 380px;
+    height: 430px;
+    background: #FF8C00;
+    border-radius: 85px 118px 0 140px;
+    z-index: 1;
+}
+
+main #start #banner img{
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    z-index: 2;
 }
 
 main #start #title{
     cursor: default;
-    width: 50%;
+    width: 53%;
 }
 
 main #start #title h2{
@@ -137,12 +146,13 @@ main #start #forOrders button{
     transition: box-shadow 0.3s ease-in;
 }
 
+
 main #start #forOrders button:hover{
     box-shadow: 0 0 12px 8px rgba(0,0,0,0.1);
 }
 
-main #start #forOrders button.order{
-    border-radius: 10px 30px;
+main #start #forOrders button#order{
+    border-radius: 25px 5px 25px 5px;
 }
 
 main #start #forOrders button#contact i{
@@ -152,26 +162,58 @@ main #start #forOrders button#contact i{
     color: #f4f4f4;
 }
 
-@media screen and (max-width: 600px){
-    header{
+@media screen and (max-width: 600px) {
+    header {
+        width: 75%;
         height: 55px;
-        justify-content: space-between;
     }
 
-    header img#logo{
+    header img#logo {
         width: 50px;
     }
 
-    header button.order{
+    header nav#menu ul {
+        right: 15px;
+        gap: 0;
+    }
+
+    header nav#menu ul li button {
+        font-size: 0.75rem;
+    }
+
+    main #start {
+        align-items: center;
+        margin-top: 0;
+    }
+
+    main #start #banner {
         display: none;
     }
 
-    header nav#pcMenu ul{
-        display: none;
+    main #start #title {
+        width: 100%;
+        text-align: center;
     }
 
-    header nav#mobileMenu ul{
-        display: flex;
+    main #start #title h2 {
+        font-size: 1.5rem;
     }
 
+    main #start #title p {
+        width: 100%;
+        margin-top: 5px;
+        font-size: 0.9rem;
+    }
+
+    main #start #forOrders {
+        margin-top: 35px;
+        flex-direction: column;
+    }
+
+    main #start #forOrders button {
+        width: 100%;
+        padding: 10px 15px;
+        font-weight: 600;
+        font-size: 1rem;
+    }
 }
