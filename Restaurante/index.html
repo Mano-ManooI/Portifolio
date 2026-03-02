@@ -1,49 +1,57 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./src/style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>AmoBurguer</title>
+    <link rel="stylesheet" href="./src/style/mediaScreen.css">
     <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+    <title>AmoBurguer</title>
 </head>
 <body>
     <header>
         <img src="./img/logo.png" draggable="false" id="logo">
-        <nav id="menu">
+        <nav id="desktopMenu">
             <ul>
-                <li><button id="toStart">Iníco</button></li>
+                <li><button id="toStart">Início</button></li>
+                <li><button id="toMenu">Cardápio</button></li>
                 <li><button id="toAbout">Sobre</button></li>
                 <li><button id="toContact">Contato</button></li>
-            </ul>   
+            </ul>
+            <button id="orderButton">Peça Agora</button>
+        </nav>
+
+        <button id="mobileMenuButton"><i class="fa-solid fa-bars"></i></button>
+        <nav id="mobileMenu">
+            <ul>
+                <li><button id="toStart">Início</button></li>
+                <li><button id="toMenu">Cardápio</button></li>
+                <li><button id="toAbout">Sobre</button></li>
+                <li><button id="toContact">Contato</button></li>
+            </ul>
+            <button id="orderButton">Peça Agora</button>
         </nav>
     </header>
     <main>
         <div id="start">
-            <div id="banner">
-                <div id="shape"></div>
-                <img src="./img/hamburguer.jpg" draggable="false">
-            </div>
-            <div id="title">
-                <h2>Não é apenas delivery, é <strong>AMOBURGUER</strong> na sua mesa.</h2>
-                <p>O hambúrguer que entende sua fome e chega sempre no ponto com muito amor.</p>
-            </div>
-            <div id="forOrders">
-                <button id="order">Realizar Pedido</button>
-                <button id="contact">
-                    <i class="fa-solid fa-phone"></i>
-                    (+55) 79 99880-1174
-                </button>
-            </div>
-            <div class="socialMedia">
-                <button class="whatsapp"></button>
-                <button class="instagram"></button>
-                <button class="facebook"></button>
-            </div>
+            inicio
+        </div>
+        <div id="menu">
+            menu
+        </div>
+        <div id="about">
+            sobre
+        </div>
+        <div id="contact">
+            contato
         </div>
     </main>
+    <footer>
+
+    </footer>
 
     <script src="./src/script/scripit.js"></script>
     <script src="./src/style/configStyle.js"></script>
+</body>
 </html>

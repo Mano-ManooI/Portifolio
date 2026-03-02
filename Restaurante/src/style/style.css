@@ -11,7 +11,6 @@
 
 html, body{
     scroll-behavior: smooth;
-    background: #f1f0f1f0;
 }
 
 button{
@@ -22,17 +21,15 @@ button{
 
 header{
     position: fixed;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 45%;
-    height: 95px;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: #FFFFFE;
     display: flex;
     align-items: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    background: #f6f8f6;
-    border-radius: 50px;
-    z-index: 1000;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 20px 20px;
+    z-index: 2000;
 }
 
 @keyframes pulsar{
@@ -54,166 +51,52 @@ header img#logo{
     position: absolute;
     left: 10px;
     animation: pulsar 1s infinite;
+    cursor: pointer;
 }
 
-header nav#menu ul{
+header nav#desktopMenu{
     position: absolute;
-    right: 25px;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 20px;
     display: flex;
-    gap: 20px;
+    gap: 40px;
 }
 
-header nav#menu ul li button{
-    font-size: 1.3rem;
-    color: #131312;
-    font-weight: 600;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-main{
-    margin-top: 105px;
-    min-height: calc(100vh - 105px);
-}
-
-main #start{
-    margin-top: 220px;
-    padding: 0 40px;
+header nav#desktopMenu ul{
     display: flex;
-    flex-direction: column;
-}
-
-main #start #banner{
-    position: absolute;
-    top: 150px;
-    right: 40px;
-    display: flex;
-    justify-content: center;
+    gap: 30px;
     align-items: center;
 }
 
-main #start #banner #shape{
-    width: 380px;
-    height: 430px;
-    background: #FF8C00;
-    border-radius: 85px 118px 0 140px;
-    z-index: 1;
+header nav#desktopMenu ul li button{
+    font-size: 1.3rem;
+    color: #272343;
+    font-weight: 530;
 }
 
-main #start #banner img{
-    position: absolute;
-    width: 280px;
-    height: 280px;
-    z-index: 2;
+header nav#desktopMenu ul li button:hover{
+    color: #FF5F00;
 }
 
-main #start #title{
-    cursor: default;
-    width: 53%;
+button#orderButton{
+    padding: 10px 20px;
+    background: linear-gradient(140deg, #FFC300, #FF5F00);
+    color: #FFFFFE;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    box-shadow: 0px 0px 5px #f75d04;
+    transition: box-shadow 0.3 ease-in;
 }
 
-main #start #title h2{
-    font-size: 2rem;
-    color: #2b2101;
+button#orderButton:hover{
+    box-shadow: 0px 0px 10px #f75d04;
 }
 
-main #start #title h2 strong{
-    color: #F5A858;
+#mobileMenuButton, nav#mobileMenu{
+    display: none;
 }
 
-main #start #title p{
-    width: 90%;
-    margin-top: 10px;
-    font-size: 1.2rem;
-}
-
-main #start #forOrders{
-    margin-top: 35px;
-    display: flex;
-    gap: 20px;
-}
-
-main #start #forOrders button{
-    padding: 10px 15px;
-    background-color: #FECD29;
-    color: #131312;
-    box-shadow: 0 0 12px 4px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: box-shadow 0.3s ease-in;
-}
-
-
-main #start #forOrders button:hover{
-    box-shadow: 0 0 12px 8px rgba(0,0,0,0.1);
-}
-
-main #start #forOrders button#order{
-    border-radius: 25px 5px 25px 5px;
-}
-
-main #start #forOrders button#contact i{
-    padding: 5px;
-    border-radius: 5px;
-    background: #19cf10;
-    color: #f4f4f4;
-}
-
-@media screen and (max-width: 600px) {
-    header {
-        width: 75%;
-        height: 55px;
-    }
-
-    header img#logo {
-        width: 50px;
-    }
-
-    header nav#menu ul {
-        right: 15px;
-        gap: 0;
-    }
-
-    header nav#menu ul li button {
-        font-size: 0.75rem;
-    }
-
-    main #start {
-        align-items: center;
-        margin-top: 0;
-    }
-
-    main #start #banner {
-        display: none;
-    }
-
-    main #start #title {
-        width: 100%;
-        text-align: center;
-    }
-
-    main #start #title h2 {
-        font-size: 1.5rem;
-    }
-
-    main #start #title p {
-        width: 100%;
-        margin-top: 5px;
-        font-size: 0.9rem;
-    }
-
-    main #start #forOrders {
-        margin-top: 35px;
-        flex-direction: column;
-    }
-
-    main #start #forOrders button {
-        width: 100%;
-        padding: 10px 15px;
-        font-weight: 600;
-        font-size: 1rem;
-    }
+main{
+    margin-top: 110px;
+    min-height: calc(100vh - 110px);
 }
