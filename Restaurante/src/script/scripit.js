@@ -1,14 +1,13 @@
 window.addEventListener("DOMContentLoaded", () =>{
-    const logo = document.getElementById('logo');
-    logo.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0, behavior: "smooth"
+    const logo = document.querySelectorAll('#logo');
+    logo.forEach( (button) =>{
+        button.addEventListener("click", () => {
+            window.scrollTo({top: 0, behavior: "smooth"});
         });
     });
     const startButton = document.getElementById('toStart');
     startButton.addEventListener("click", () => {
-        const startSection = document.getElementById('start');
-        startSection.scrollIntoView({behavior: "smooth"});
+        window.scrollTo({top: 0, behavior: "smooth"});
     });
     const menuButton = document.getElementById('toMenu');
     menuButton.addEventListener("click", () => {
@@ -31,5 +30,10 @@ window.addEventListener("DOMContentLoaded", () =>{
         button.addEventListener("click", () => {
             open("https://whatsapp.com/channel/0029VbCVExOA89Mg8Gx1K73e");
         });
+    });
+
+    const gitHubButton = document.getElementById('toGitHub');
+    gitHubButton.addEventListener("click", () => {
+        open("https://github.com/Mano-ManooI");
     });
 });
