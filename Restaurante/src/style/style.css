@@ -47,7 +47,7 @@ header{
     }
 }
 
-img#logo{
+header img#logo{
     width: 100px;
     position: absolute;
     left: 10px;
@@ -119,8 +119,8 @@ button#orderButton.order2:hover{
 }
 
 main{
-    margin-top: 110px;
-    min-height: calc(100vh - 110px);
+    margin-top: 120px;
+    min-height: calc(100vh - 120px);
     padding: 0 20px;
 }
 
@@ -148,11 +148,7 @@ main #start #info i{
 
 main #start #title h1{
     font-size: 6rem;
-    font-weight: 700;
-    font-stretch: condensed;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    text-transform: uppercase;
+    font-weight: 700
 }
 
 main #start #title h1#title2{
@@ -171,9 +167,57 @@ main #start #title p{
     font-weight: 400;
 }
 
+main #start #assessment{
+    width: fit-content;
+    padding: 20px;
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    border-radius: 125px;
+    text-align: center;
+    cursor: default;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+main #start #assessment:hover{
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+main #start #assessment h4{
+    font-size: 1.4rem;
+    font-weight: 750;
+    color: #FF5E00;
+}
+
+main #start #assessment h4 i{
+    color: #FFC400;
+}
+
+main #start #assessment h5{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #6b6b6b;
+}
+
+main #start #assessment hr{
+    width: 2px;
+    border: none;
+    box-shadow: 0px 0px 4px rgb(255, 102, 0);
+    background: #f17611;
+}
+
+main #start img{
+    width: 450px;
+    position: absolute;
+    right: 45px;
+    top: 350px;
+    transform: translateY(-50%);
+    border-radius: 120px 75px 38px 260px;
+}
+
 footer{
     width: 100%;
-    height: 150px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,6 +227,7 @@ footer{
 
 footer p{
     font-weight: 600;
+    font-size: 1.35rem;
 }
 
 footer #credits{
@@ -196,9 +241,9 @@ footer #credits{
 footer #credits img{
     width: 70px;
     border-radius: 50%;
-    box-shadow: 0 0 15px rgb(9, 5, 230);
+    box-shadow: 0 0 15px rgb(179, 179, 179);
 }
 
 footer #credits img:hover{
-    box-shadow: 0 0 20px rgb(9, 5, 230);
+    box-shadow: 0 0 16.5px rgb(247, 238, 220);
 }
