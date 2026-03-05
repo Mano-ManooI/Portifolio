@@ -169,18 +169,11 @@ main #start #title p{
 
 main #start #assessment{
     width: fit-content;
-    padding: 20px;
-    margin-top: 40px;
+    margin-top: 50px;
     display: flex;
     gap: 20px;
-    border-radius: 125px;
     text-align: center;
     cursor: default;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-}
-
-main #start #assessment:hover{
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 main #start #assessment h4{
@@ -212,6 +205,7 @@ main #start img{
     right: 45px;
     top: 350px;
     transform: translateY(-50%);
+    box-shadow: -15px 9.5px 5px rgb(255, 229, 177);
     border-radius: 120px 75px 38px 260px;
 }
 
