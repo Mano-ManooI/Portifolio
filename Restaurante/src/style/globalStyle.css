@@ -12,6 +12,9 @@
 html, body{
     scroll-behavior: smooth;
     background: #FEF8EC;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 button{
@@ -79,12 +82,6 @@ header nav#desktopMenu ul li button:hover{
     color: #FF5F00;
 }
 
-main #start #orderButtons{
-    margin-top: 35px;
-    display: flex;
-    gap: 20px;
-}
-
 button#orderButton{
     padding: 10px 20px;
     border-radius: 20px;
@@ -122,12 +119,19 @@ main{
     margin-top: 120px;
     min-height: calc(100vh - 120px);
     padding: 0 20px;
+    flex: 1;
 }
 
 main #start{
-    height: 100vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
+}
+
+main #start #orderButtons{
+    margin-top: 35px;
+    display: flex;
+    gap: 20px;
 }
 
 main #start #info{
@@ -210,6 +214,7 @@ main #start img{
 }
 
 footer{
+    position: relative;
     width: 100%;
     height: 100px;
     display: flex;
