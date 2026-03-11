@@ -6,20 +6,30 @@ const toAbout = document.getElementById("toAbout");
 const classActive = "positionActive";
 const classInactive = "positionInactive";
 
-function styleMenu(){
-    const elementMenu = document.querySelector("#desktopMenu ul li button");
-    if(elementMenu.classList.contains(classActive)){
-        elementMenu.style.color = "#FF5F00"
-    }
-};
-
-styleMenu();
-
 window.addEventListener("DOMContentLoaded", () =>{
     window.addEventListener("scroll", () =>{
-        if(window.scrollY > 0){
+        if(window.scrollY >= 0 && window.scrollY < 565){
+            if(toStart.classList.contains(classInactive)){
+                toStart.classList.remove(classInactive);
+                toStart.classList.add(classActive);
+            }else{
+                toStart.classList.add(classActive);
+            }
+        }else{
             toStart.classList.remove(classActive);
             toStart.classList.add(classInactive);
+        }
+
+        if(window.scrollY >= 565){
+            if(toMenu.classList.contains(classInactive)){
+                toMenu.classList.remove(classInactive);
+                toMenu.classList.add(classActive);
+            }else{
+                toMenu.classList.add(classActive);
+            }
+        }else{
+            toMenu.classList.remove(classActive);
+            toMenu.classList.add(classInactive);
         }
     })
 })

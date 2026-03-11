@@ -64,12 +64,12 @@
         text-align: center;
     }
 
-    main #start #title h1{
+    main #start #titleStart h1{
         margin-bottom: 10px;
         font-size: 3em;
     }
 
-    main #start #title p{
+    main #start #titleStart p{
         width: 90%;
         position: absolute;
         top: 270px;

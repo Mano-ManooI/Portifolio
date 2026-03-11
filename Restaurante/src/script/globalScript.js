@@ -11,18 +11,15 @@ window.addEventListener("DOMContentLoaded", () =>{
     });
     const menuButton = document.getElementById('toMenu');
     menuButton.addEventListener("click", () => {
-        const menuSection = document.getElementById('menu');
-        menuSection.scrollIntoView({behavior: "smooth"});
+        window.scrollTo({top: 565, behavior: "smooth"});
     });
     const aboutButton = document.getElementById('toAbout');
     aboutButton.addEventListener("click", () => {
-        const aboutSection = document.getElementById('about');
-        aboutSection.scrollIntoView({behavior: "smooth"});
+        window.scrollTo({top: 565, behavior: "smooth"});
     });
     const contactButton = document.getElementById('toContact');
     contactButton.addEventListener("click", () => {
-        const contactSection = document.getElementById('contact');
-        contactSection.scrollIntoView({behavior: "smooth"});
+        window.scrollTo({top: 565, behavior: "smooth"});
     });
 
     const orderButton = document.querySelectorAll('#orderButton');
