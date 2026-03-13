@@ -17,6 +17,10 @@ html, body{
     flex-direction: column;
 }
 
+.hidden{
+    display: none;
+}
+
 button{
     background: none;
     border: none;
@@ -289,7 +293,7 @@ main #menu #selectTypeFoods button.seletctedFood:hover{
     box-shadow: 0px 0px 10px #f75d04;
 }
 
-main #menu #foods .foodCard{
+main #menu #foods div{
     width: 500px;
     border-radius: 30px;
     background: #ffffff;
