@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/style/style.css">
+    <link rel="stylesheet" href="./src/style/media/mobile.css">
+    <link rel="shortcut icon" href="./img/icone.png" type="image/png">
+    <title>Tempus - Temporizador Digital</title>
+</head>
+<body>
+    <main>
+        <div id="inputData">
+            <div>
+                <button id="inputHours" class="inputValues">00</button>
+                <button id="inputMinutes" class="inputValues">00</button>
+                <button id="inputSeconds" class="inputValues">00</button>
+            </div>
+            <button id="startTimerButton"><i class="fa-solid fa-circle-play"></i></button>
+        </div>
+        <div id="timer">
+            <div>
+                <span id="hours">00</span>
+                <span id="minutes">00</span>
+                <span id="seconds">00</span>
+            </div>
+            <div id="buttons">
+                <button id="pause"><i class="fa-solid fa-circle-pause"></i></button>
+                <button id="continue"><i class="fa-solid fa-circle-play"></i></button>
+                <button id="reset"><i class="fa-solid fa-rotate-right"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./src/script.js"></script>
+    <script src="./src/style/style.js"></script>
+</body>
+</html>

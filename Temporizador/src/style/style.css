@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Chorasmian&family=Orbitron:wght@400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+html, body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Noto Sans Chorasmian", sans-serif;
+    background: rgb(17, 80, 255)
+}
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+i{
+    width: fit-content;
+    color: #fff;
+    border-radius: 50%;
+}
+
+main #inputData{
+    display: flex;
+    flex-direction: column;
+    background: none;
+}
+
+main #inputData div{
+    display: flex;
+    gap: 35px;
+}
+
+main #inputData div button{
+    font-family: "Orbitron", sans-serif;
+    font-size: 10rem;
+    color: #e2e2e2;
+}
+
+main #inputData button#startTimerButton{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5rem;
+}
+
+main #inputData button#startTimerButton i:hover{
+    color: #25f0df;
+}
+
+main #timer{
+    display: none;
+}
+
+main #timer div{
+    display: flex;
+    gap: 35px;
+}
+
+main #timer div span{
+    font-family: "Orbitron", sans-serif;
+    font-size: 10rem;
+    color: #f5fcff;
+}
+
+main #timer #buttons{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main #timer #buttons button{
+    font-size: 5rem;
+}
+
+main #timer #buttons button#continue{
+    display: none;
+}
+
+main #timer #buttons button#pause i:hover{
+    color: #25f0df;
+}
+
+main #timer #buttons button#continue i:hover{
+    color: #f0dc25;
+}
+
+main #timer #buttons button#reset i:hover{
+    color: #91f025;
+}

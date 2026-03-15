@@ -1,0 +1,31 @@
+@media screen and (max-width: 500px) {
+    main #inputData div {
+        display: flex;
+        gap: 15px;
+    }
+
+    main #inputData div button {
+        font-size: 3.7rem;
+    }
+
+    main #inputData button#startTimerButton {
+        top: 60%;
+        font-size: 3.5rem;
+    }
+
+    main #timer div {
+        gap: 15px;
+    }
+
+    main #timer div span {
+        font-size: 3.7rem;
+    }
+
+    main #timer #buttons {
+        top: 60%;
+    }
+
+    main #timer #buttons button {
+        font-size: 3.5rem;
+    }
+}
