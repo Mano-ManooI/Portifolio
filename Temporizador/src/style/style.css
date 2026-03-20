@@ -40,10 +40,14 @@ main #inputData div{
     gap: 35px;
 }
 
-main #inputData div button{
+main #inputData div input{
+    width: 280px;
+    color: #e2e2e2;
+    background: none;
+    border: none;
     font-family: "Orbitron", sans-serif;
     font-size: 10rem;
-    color: #e2e2e2;
+    text-align: center;
 }
 
 main #inputData button#startTimerButton{
