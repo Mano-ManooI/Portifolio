@@ -82,6 +82,15 @@ window.addEventListener("DOMContentLoaded", () =>{
             timer = setInterval(decreaseTimer, 1000);
         };
     });
+    const pauseButton = document.getElementById("pause");
+    pauseButton.addEventListener("click", () =>{
+        clearInterval(timer);
+    });
+    const continueButton = document.getElementById("continue");
+    continueButton.addEventListener("click", () =>{
+        timer = setInterval(decreaseTimer, 1000);
+    });
     const resetButton = document.getElementById("reset");
+    clearInterval(timer);
     resetButton.addEventListener("click", () => window.location.reload());
 });

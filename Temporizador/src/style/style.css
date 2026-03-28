@@ -14,7 +14,8 @@ html, body{
     justify-content: center;
     align-items: center;
     font-family: "Noto Sans Chorasmian", sans-serif;
-    background: rgb(17, 80, 255)
+    background: linear-gradient(180deg, rgb(17, 15, 15), rgb(109, 109, 109));
+
 }
 
 button{
@@ -24,8 +25,6 @@ button{
 }
 
 i{
-    width: fit-content;
-    color: #fff;
     border-radius: 50%;
 }
 
@@ -48,6 +47,7 @@ main #inputData div input{
     font-family: "Orbitron", sans-serif;
     font-size: 10rem;
     text-align: center;
+    cursor: pointer;
 }
 
 main #inputData button#startTimerButton{
@@ -58,8 +58,14 @@ main #inputData button#startTimerButton{
     font-size: 5rem;
 }
 
+main #inputData button#startTimerButton i{
+    width: fit-content;
+    color: #003ba8;
+    background: #fff;
+}
+
 main #inputData button#startTimerButton i:hover{
-    color: #25f0df;
+    color: #1245ee;
 }
 
 main #timer{
@@ -92,14 +98,26 @@ main #timer #buttons button#continue{
     display: none;
 }
 
+main #timer #buttons button#pause i{
+    width: fit-content;
+    color: #00a892;
+    background: #fff;
+}
+
 main #timer #buttons button#pause i:hover{
-    color: #25f0df;
+    color: #0f79a3;
+}
+
+main #timer #buttons button#continue i{
+    width: fit-content;
+    color: #003ba8;
+    background: #fff;
 }
 
 main #timer #buttons button#continue i:hover{
-    color: #f0dc25;
+    color: #1245ee;
 }
 
-main #timer #buttons button#reset i:hover{
-    color: #91f025;
+main #timer #buttons button#reset i{
+    color: #d3d3d3;
 }
