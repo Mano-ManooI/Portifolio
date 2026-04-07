@@ -20,6 +20,17 @@ function confgButtons(button){
         if(clickUser === "0"){
             visor.innerText = "0";
             return;
+        }else if(clickUser === "."){
+            if(nowValue.includes(".")){
+                return;
+            }else{
+                if(visor.innerText === "0" || visor.innerText === "."){
+
+                    visor.innerText = "0.";
+                }else{
+                    visor.innerText += clickUser;
+                };
+            };
         }else{
             visor.innerText = clickUser;
         };
