@@ -1,39 +1,27 @@
 const classSelected = "seletctedFood";
 
-function displayFoods(){
+function displayFoods() {
     const toBurger = document.getElementById("toBurger");
-    const toSide = document.getElementById("toSide");
-    const toDrink = document.getElementById("toDrink");
-    const burger = document.querySelectorAll("#burger");
-    const side = document.querySelectorAll("#side");
-    const drink = document.querySelectorAll("#drink");
+    const toSide   = document.getElementById("toSide");
+    const toDrink  = document.getElementById("toDrink");
 
-    const classHidden = "hidden";
+    const burgers = document.querySelectorAll("#burger");
+    const sides   = document.querySelectorAll("#side");
+    const drinks  = document.querySelectorAll("#drink");
 
-    if(toBurger.classList.contains(classSelected)){
-        side.forEach((s) => s.classList.add(classHidden));
-        drink.forEach((d) => d.classList.add(classHidden));
-    }else{
-        side.forEach((s) => s.classList.remove(classHidden));
-        drink.forEach((d) => d.classList.remove(classHidden));
-    };
+    const burgerSelected = toBurger.classList.contains(classSelected);
+    const sideSelected   = toSide.classList.contains(classSelected);
+    const drinkSelected  = toDrink.classList.contains(classSelected);
 
-    if(toSide.classList.contains(classSelected)){
-        burger.forEach((b) => b.classList.add(classHidden));
-        drink.forEach((d) => d.classList.add(classHidden));
-    }else{
-        burger.forEach((b) => b.classList.remove(classHidden));
-        drink.forEach((d) => d.classList.remove(classHidden));
-    };
+    const noneSelected = !burgerSelected && !sideSelected && !drinkSelected;
 
-    if(toDrink.classList.contains(classSelected)){
-        burger.forEach((b) => b.classList.add(classHidden));
-        side.forEach((s) => s.classList.add(classHidden));
-    }else{
-        burger.forEach((b) => b.classList.remove(classHidden));
-        side.forEach((s) => s.classList.remove(classHidden));
-    };
-};
+    const toggle = (elements, visible) =>
+        elements.forEach(el => el.classList.toggle("hidden", !visible));
+
+    toggle(burgers, noneSelected || burgerSelected);
+    toggle(sides,   noneSelected || sideSelected);
+    toggle(drinks,  noneSelected || drinkSelected);
+}
 
 window.addEventListener("DOMContentLoaded", () =>{
     const buttons = document.querySelectorAll("#selectTypeFoods button");
