@@ -7,7 +7,7 @@ function Profile(){
     return(
         <div>
             <Header />
-            <main>
+            <main id="profileMain">
                 <section>
                     <button><IoIosArrowRoundBack /></button>
                     <div>

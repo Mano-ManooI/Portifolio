@@ -10,7 +10,7 @@ import NotFound from './pages/NotFound.jsx';
 
 function App(){
   return(
-    <div>
+    <div>/
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
