@@ -78,27 +78,3 @@ main.NotFound button a{
     font-weight: 600;
     color: #fff;
 }
-
-aside{
-    position: fixed;
-    top: 125px;
-    right: 10px;
-    width: 350px;
-    height: calc(100vh - 125px);
-    background: #1D1C1C;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding-top: 20px;
-    border-radius: 80px 10px 10px 80px;
-}
-
-aside div#titleAside{
-    width: 90%;
-    padding: 10px 15px;
-    border-radius: 25px;
-    background: rgba(58, 56, 56, 0.5);
-    box-shadow: 0 0 10px rgba(216, 216, 216, 0.5);
-
-}
