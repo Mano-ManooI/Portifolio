@@ -1,0 +1,165 @@
+header{
+    width: 100%;
+    height: 205px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #191B1F;
+    color: #F4F4F4;
+}
+
+header div#topBar{
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+header div#topBar p{
+    margin-top: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #929292;
+}
+
+header div#topBar div{
+    display: flex;
+    gap: 15px;
+}
+
+header div#topBar div button{
+    font-size: 0.9rem;
+    font-weight: 545;
+    transition: all 0.2s ease-in;
+}
+
+header div#topBar div button#logIn{
+    background: none;
+    color: #F4F4F4;
+}
+
+header div#topBar div button#logIn:hover{
+    color: #F0A500;
+}
+
+header div#topBar div button#signUp{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #F0A000;
+    color: #1A1C20;
+}
+
+header div#topBar div button#signUp:hover{
+    background: #d48e02;
+}
+
+header div#mainHeader{
+    width: 100%;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #f4f4f44f;
+    border-bottom: 0.5px solid #f4f4f44f;
+}
+
+header div#mainHeader h1{
+    cursor: default;
+    margin-left: 40px;
+    font-size: 2.5rem;
+    font-family: "Namdhinggo", serif;
+}
+
+header div#mainHeader h1 b{
+    color: #F0A500;
+}
+
+header div#mainHeader section{
+    margin-right: 40px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #F4F4F4;
+    background: #303236;
+}
+
+header div#mainHeader section svg{
+    margin-top: 2px;
+}
+
+header div#mainHeader section span{
+    display: flex;
+    gap: 15px;
+}
+
+header div#mainHeader section span p{
+    font-size: 0.9rem;
+    font-weight: 150;
+}
+
+header nav{
+    position: absolute;
+    left: 45px;
+    top: 150px;
+    padding: 10px 0;
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav ul li button{
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 545;
+    background: none;
+    color: #f2f2f2;
+    transition: all 0.2s ease-in;
+}
+
+header nav ul li button:hover{
+    color: #F0A000;
+    background: #303235cb;
+}
+
+@media screen and (max-width: 840px) {
+    header {
+        height: 195px;
+    }
+
+    header div#mainHeader {
+        justify-content: center;
+        padding: 15px 0;
+    }
+
+    header div#mainHeader h1 {
+        margin-left: 0;
+    }
+
+    header div#mainHeader section {
+        display: none;
+    }
+
+    header nav {
+        top: 130px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        height: fit-content;
+    }
+
+    header div#topBar {
+        width: 90%;
+    }
+
+    header div#topBar div button {
+        font-size: 0.75rem;
+    }
+
+    header nav {
+        display: none;
+    }
+}

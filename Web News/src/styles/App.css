@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Namdhinggo:wght@400;500;600;700;800&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body, html{
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main div#topNews{
+    margin: 25px 0;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px;
+    background: #191B1F;
+    color: #f2f2f2;
+    font-size: 0.85rem;
+    font-weight: 450;
+}
+
+main div#topNews span{
+    padding: 5px 10px;
+    border-radius: 15px;
+    background: #F0A000;
+    color: #191B1F;
+}
+
+main div#mainNews{
+    position: relative;
+    overflow: hidden;
+    width: 85%;
+    height: 530px;
+    background-image: url(../assets/img1.jpeg);
+    background-size: 100%;
+    background-position: center;
+    transition: all 0.8s;
+}
+
+main div#mainNews::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%; /* altura do degradê */
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.7), transparent 
+    );
+}
+
+main div#mainNews:hover{
+    background-size: 103%;
+}
+
+main div#mainNews div#dataMainNews{
+    margin: 230px 45px 0 45px;
+}
+
+main div#mainNews div#dataMainNews span{
+    padding: 10px 15px;
+    font-weight: 500;
+    color: #191B1F;
+    background: #F0A000;
+    border-radius: 5px;
+}
+
+main div#mainNews div#dataMainNews h1{
+    margin: 15px 0;
+    color: #f2f2f2;
+    font-size: 2.6rem;
+    font-family: "Noto Serif", serif;
+    transition: color 0.2s;
+}
+
+main div#mainNews:hover div#dataMainNews h1{
+    color: #F0A000;
+}
+
+main div#mainNews div#dataMainNews p{
+    display: inline;
+    color: #c5c5c5;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 1.2rem;
+    font-weight: 410;
+    transition: color 0.5s;
+}
+
+main div#mainNews:hover div#dataMainNews p{
+    color: #f2f2f2;
+}
+
+main div#mainNews div#dataMainNews nav ul{
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+main div#mainNews div#dataMainNews nav ul li{
+    color: #c1c1c1;
+    font-size: 0.9rem;
+}
+
+main div#lastNews{
+    width: 85%;
+    margin: 40px 0;
+}
+
+main div#lastNews div#titleLastNews{
+    display: flex;
+    gap: 5px;
+}
+
+main div#lastNews div#titleLastNews hr{
+    width: 5px;
+    background: #F0A500;
+    border: none;
+    border-radius: 100px;
+}
+
+main div#lastNews div#titleLastNews h2{
+    font-size: 1.9rem;
+    font-weight: 800;
+    font-family: "Namdhinggo", serif;
+}

@@ -1,0 +1,21 @@
+:root{
+    --none: none
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: var(--none);
+    list-style: var(--none);
+    text-decoration: var(--none);
+}
+
+button{
+    border: var(--none);
+    cursor: pointer;
+}
+
+input{
+    background: var(--none);
+    border: var(--none);
+}
