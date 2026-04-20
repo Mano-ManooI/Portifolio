@@ -81,13 +81,9 @@ header div#mainHeader section{
     background: #303236;
 }
 
-header div#mainHeader section svg{
-    margin-top: 2px;
-}
-
 header div#mainHeader section span{
     display: flex;
-    gap: 15px;
+    gap: 8px;
 }
 
 header div#mainHeader section span p{

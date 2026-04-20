@@ -1,4 +1,4 @@
-import Header from "./components/Header.jsx"
+import Header from "./Header.jsx"
 import CardNews from "./components/CardNews.jsx"
 
 import './styles/App.css'
@@ -10,25 +10,25 @@ import { CiClock2 } from "react-icons/ci";
 
 function App(){
   const imgUrl1 = "../src/assets/img1.jpeg";
-  const category1 = "Tecnologia";
+  const category1 = "TECNOLOGIA";
   const title1 = "Inteligência artificial revoluciona diagnósticos médicos em hospitais brasileiros";
   const descripition1 = "Tecnologia já está sendo utilizada em mais de 50 hospitais do país, reduzindo em 40% o     tempo de diagnóstico de doenças complexas.";
   const author1 = "José Roberto";
   const duration1 = "4";
 
   const imgUrl2 = "../src/assets/img2.jpeg";
-  const category2 = "Esporte"; //Parei Aqui!
-  const title2 = "Inteligência artificial revoluciona diagnósticos médicos em hospitais brasileiros";
-  const descripition2 = "Tecnologia já está sendo utilizada em mais de 50 hospitais do país, reduzindo em 40% o     tempo de diagnóstico de doenças complexas.";
-  const author2 = "José Roberto";
-  const duration2 = "4";
+  const category2 = "ESPORTE";
+  const title2 = "Seleção Brasileira convoca jogadores para eliminatórias da Copa";
+  const descripition2 = "Técnico anuncia lista com 23 atletas para os próximos jogos decisivos. Estrelas da Europa lideram convocação histórica.";
+  const author2 = "Reniselma Santos";
+  const duration2 = "3";
 
   const imgUrl3 = "../src/assets/img3.jpeg";
-  const category3 = "Tecnologia";
-  const title3 = "Inteligência artificial revoluciona diagnósticos médicos em hospitais brasileiros";
-  const descripition3 = "Tecnologia já está sendo utilizada em mais de 50 hospitais do país, reduzindo em 40% o     tempo de diagnóstico de doenças complexas.";
-  const author3 = "José Roberto";
-  const duration3 = "4";
+  const category3 = "MUNDO";
+  const title3 = "Acordo comercial entre Brasil e União Europeia entra em nova fase de negociações";
+  const descripition3 = "Representantes de ambos os lados se reúnem em Bruxelas para definir termos finais do maior acordo comercial da história.";
+  const author3 = "Miguel Santos";
+  const duration3 = "6";
 
   return(
     <div>
@@ -59,7 +59,13 @@ function App(){
             <hr />
             <h2>Últimas Notícias</h2>
           </div>
-          <CardNews imgUrl={imgUrl1} category={category1}/>
+          <div id="cards">
+            <CardNews imgUrl={imgUrl1} category={category1} title={title1} descripition={descripition1} author={author1} duration={duration1} />
+            
+            <CardNews imgUrl={imgUrl2} category={category2} title={title2} descripition={descripition2} author={author2} duration={duration2} />
+
+            <CardNews imgUrl={imgUrl3} category={category3} title={title3} descripition={descripition3} author={author3} duration={duration3} />
+          </div>
         </div>
       </main>
     </div>

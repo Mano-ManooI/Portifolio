@@ -10,11 +10,6 @@ function CardNews({ imgUrl, category, title, descripition, author, duration }){
                     <h1>{title}</h1>
                     <p>{descripition}</p>
                 </section>
-                <hr />
-                <div id="othersData">
-                    <span>{author}</span>
-                    <span><CiClock2 /> {duration} min</span>
-                </div>
             </div>
         </div>
     );

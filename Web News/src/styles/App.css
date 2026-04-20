@@ -3,6 +3,7 @@
 body, html{
     font-family: "Roboto", sans-serif;
     height: 100vh;
+    background: #F5F5F5;
 }
 
 main{
@@ -36,7 +37,7 @@ main div#mainNews{
     overflow: hidden;
     width: 85%;
     height: 530px;
-    background-image: url(../assets/img1.jpeg);
+    background-image: url(../assets/mainNews.jpeg);
     background-size: 100%;
     background-position: center;
     transition: all 0.8s;
@@ -51,7 +52,7 @@ main div#mainNews::after{
     height: 20%; /* altura do degradê */
     background: linear-gradient(
         to top,
-        rgba(0, 0, 0, 0.7), transparent 
+        rgb(0, 0, 0), transparent 
     );
 }
 
@@ -105,6 +106,11 @@ main div#mainNews div#dataMainNews nav ul{
 main div#mainNews div#dataMainNews nav ul li{
     color: #c1c1c1;
     font-size: 0.9rem;
+    transition: color 0.5s;
+}
+
+main div#mainNews:hover div#dataMainNews nav ul li{
+    color: #f3f3f3;
 }
 
 main div#lastNews{
@@ -128,4 +134,63 @@ main div#lastNews div#titleLastNews h2{
     font-size: 1.9rem;
     font-weight: 800;
     font-family: "Namdhinggo", serif;
+}
+
+main div#lastNews div#cards{
+    width: fit-content;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+main div#lastNews div#cards div#card{
+    width: 350px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    transition: 0.5s ease-in-out;
+}
+
+main div#lastNews div#cards div#card:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+main div#lastNews div#cards div#card img{
+    width: 350px;
+    height: 200px;
+    display: block;
+    border-radius: 15px;
+    transition: 0.35s ease;
+}
+
+main div#lastNews div#cards div#card:hover img{
+    transform: scale(1.015);
+    transform-origin: center center;
+}
+
+main div#lastNews div#cards div#card div#dataLastNews h3{
+    margin: 10px 0;
+    font-size: 0.8rem;
+    font-family: "Libre Franklin", sans-serif;
+    color: #da9306;
+}
+
+main div#lastNews div#cards div#card div#dataLastNews section h1{
+    margin-bottom: 10px;
+    font-size: 1.15rem;
+    font-family: "Noto Serif", serif;
+    transition: color 0.2s ease-in;
+}
+
+main div#lastNews div#cards div#card:hover div#dataLastNews section h1{
+    color: #F0A000;
+}
+
+main div#lastNews div#cards div#card div#dataLastNews section p{
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #818181;
 }
