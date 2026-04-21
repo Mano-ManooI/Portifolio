@@ -148,6 +148,7 @@ main div#lastNews div#cards div#card{
     width: 350px;
     padding: 15px;
     background: #fff;
+    cursor: pointer;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
@@ -179,7 +180,11 @@ main div#lastNews div#cards div#card div#dataLastNews h3{
 }
 
 main div#lastNews div#cards div#card div#dataLastNews section h1{
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     font-size: 1.15rem;
     font-family: "Noto Serif", serif;
     transition: color 0.2s ease-in;
@@ -190,7 +195,164 @@ main div#lastNews div#cards div#card:hover div#dataLastNews section h1{
 }
 
 main div#lastNews div#cards div#card div#dataLastNews section p{
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     font-weight: 400;
     font-size: 0.9rem;
     color: #818181;
+}
+
+main div#lastNews div#cards div#card hr{
+    height: 0.3px;
+    margin: 15px 0 10px 0;
+    border-radius: 100px;
+    border: none;
+    background: #e0e0e0;
+}
+
+main div#lastNews div#cards div#card ul{
+    display: flex;
+    gap: 10px;
+}
+
+main div#lastNews div#cards div#card ul li{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #504f4fc0;
+}
+
+@media screen and (max-width: 840px) {
+    main div#topNews {
+        width: 75%;
+        padding: 10px 10px;
+        font-size: 0.75rem;
+        text-align: center;
+    }
+
+    main div#topNews span {
+        display: none;
+    }
+
+    main div#mainNews {
+        display: none;
+    }
+
+    main div#mainNews div#dataMainNews nav ul {
+        display: none;
+    }
+
+    main div#lastNews {
+        margin: 10px 0;
+    }
+
+    main div#lastNews div#titleLastNews {
+        display: flex;
+        gap: 5px;
+    }
+
+    main div#lastNews div#titleLastNews hr {
+        width: 5px;
+        background: #F0A500;
+        border: none;
+        border-radius: 100px;
+    }
+
+    main div#lastNews div#titleLastNews h2 {
+        font-size: 1.9rem;
+        font-weight: 800;
+        font-family: "Namdhinggo", serif;
+    }
+
+    main div#lastNews div#cards {
+        width: 85%;
+        margin-left: -16px;
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    main div#lastNews div#cards div#card {
+        width: 350px;
+        padding: 15px;
+        background: #fff;
+        cursor: pointer;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        transition: 0.5s ease-in-out;
+    }
+
+    main div#lastNews div#cards div#card:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+
+    main div#lastNews div#cards div#card img {
+        width: 350px;
+        height: 200px;
+        display: block;
+        border-radius: 15px;
+        transition: 0.35s ease;
+    }
+
+    main div#lastNews div#cards div#card:hover img {
+        transform: scale(1.015);
+        transform-origin: center center;
+    }
+
+    main div#lastNews div#cards div#card div#dataLastNews h3 {
+        margin: 10px 0;
+        font-size: 0.8rem;
+        font-family: "Libre Franklin", sans-serif;
+        color: #da9306;
+    }
+
+    main div#lastNews div#cards div#card div#dataLastNews section h1 {
+        margin-bottom: 15px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: 1.15rem;
+        font-family: "Noto Serif", serif;
+        transition: color 0.2s ease-in;
+    }
+
+    main div#lastNews div#cards div#card:hover div#dataLastNews section h1 {
+        color: #F0A000;
+    }
+
+    main div#lastNews div#cards div#card div#dataLastNews section p {
+        margin-bottom: 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-weight: 400;
+        font-size: 0.9rem;
+        color: #818181;
+    }
+
+    main div#lastNews div#cards div#card hr {
+        height: 0.3px;
+        margin: 15px 0 10px 0;
+        border-radius: 100px;
+        border: none;
+        background: #e0e0e0;
+    }
+
+    main div#lastNews div#cards div#card ul {
+        display: flex;
+        gap: 10px;
+    }
+
+    main div#lastNews div#cards div#card ul li {
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: #504f4fc0;
+    }
 }
