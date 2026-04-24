@@ -224,7 +224,38 @@ main div#lastNews div#cards div#card ul li{
     color: #504f4fc0;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 840px){
+    main div#mainNews{
+        height: 450px;
+    }
+
+    main div#mainNews div#dataMainNews{
+        margin: 130px 45px 0 45px;
+    }
+
+    main div#mainNews div#dataMainNews span{
+        display: none;
+    }
+
+    main div#mainNews div#dataMainNews h1{
+        color: #F0A000;
+        text-align: center;
+    }
+
+    main div#mainNews div#dataMainNews p{
+        display: none;
+    }
+
+    main div#mainNews div#dataMainNews nav{
+        display: none;
+    }
+
+    main div#lastNews{
+        margin-left: -60px;
+    }
+}
+
+@media screen and (max-width: 480px) {
     main div#topNews {
         width: 75%;
         padding: 10px 10px;
@@ -268,11 +299,11 @@ main div#lastNews div#cards div#card ul li{
 
     main div#lastNews div#cards {
         width: 85%;
-        margin-left: -16px;
+        margin-left: 25px;
         margin-top: 35px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
         gap: 25px;
     }
 
