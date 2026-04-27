@@ -145,6 +145,34 @@ main div#shapes span.gradient{
     z-index: 1;
 }
 
+main div#arrowsControl{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+main div#arrowsControl button{
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(144, 151, 243, 0.5);
+    font-size: 2rem;
+    background: #040f3a;
+    color: #fff;
+    transition: background 0.2s ease-in-out;
+}
+
+main div#arrowsControl button:hover{
+    background: #08086b;
+}
+
 main div#mainContents div.item{
     width: 75%;
     height: 70%;
@@ -152,10 +180,9 @@ main div#mainContents div.item{
     top: 50%;
     left: calc(50% + 100px);
     transform: translate(-50%, -50%);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
-    opacity: 0;
     z-index: 1;
     transition: left 0.4s ease-in-out, opacity 0.3s ease-in;
 /*  background: red;    */
@@ -169,7 +196,7 @@ main div#mainContents div.item img{
 
 main div#mainContents div.item.visible{
     left: 50%;
-    opacity: 1;
+    display: flex;
 }
 
 main div#mainContents div.item.visible section{
