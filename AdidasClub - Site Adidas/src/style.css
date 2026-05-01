@@ -4,7 +4,7 @@
     --none: none;
     --font1: "Roboto", sans-serif;
     --font2: "M PLUS 1", sans-serif;
-    --gradientShape: #081c6e2a;
+    --gradientShape: #061e7c1a;
 }
 
 *{
@@ -128,13 +128,13 @@ main div#shapes span.circle:nth-child(4){
     }
 
     100%{
-        width: 350px;
-        height: 350px;
+        width: 400px;
+        height: 400px;
     }
 }
 
 main div#shapes span.gradient{
-    animation: infinite 3s pulse ease-in;
+    animation: infinite 8s pulse ease-in;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -185,13 +185,46 @@ main div#mainContents div.item{
     justify-content: center;
     z-index: 1;
     transition: left 0.4s ease-in-out, opacity 0.3s ease-in;
-/*  background: red;    */
 }
 
 main div#mainContents div.item img{
     width: 200px;
     margin-right: 15px;
-/*  background: blue; */
+}
+
+main div#mainContents div.item section h2{
+    color: #0770da;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+main div#mainContents div.item section h1{
+    width: 600px;
+    line-height: 1;
+    font-size: 2.5rem;
+    color: #f2f1fa;
+}
+
+main div#mainContents div.item section p{
+    margin-top: -15px;
+    color: #adafb1;
+    font-size: 1.2rem;
+    width: 600px;
+}
+
+main div#mainContents div.item section button{
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #172046, #0606fcd3);
+    border: var(--none);
+    border-radius: 25px;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: box-shadow 0.2s ease;
+}
+
+main div#mainContents div.item section button:hover{
+    box-shadow: 0 0 10px rgb(9, 21, 83);
 }
 
 main div#mainContents div.item.visible{
@@ -199,6 +232,60 @@ main div#mainContents div.item.visible{
     display: flex;
 }
 
-main div#mainContents div.item.visible section{
-/*  background: green; */
+@media screen and (max-width: 500px){
+    header img{
+        width: 65px;
+        left: 20px;
+    }
+
+    header nav{
+        right: 20px;
+    }
+
+    header nav ul{
+        gap: 5px;
+    }
+
+    header nav ul li button{
+        font-size: 0.8rem;
+    }
+
+    main div#mainContents div.item{
+        width: 75%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main div#mainContents div.item img{
+        display: block;
+        width: 180px;
+        position: absolute;
+    }
+
+    main div#mainContents div.item section h2{
+        position: relative;
+        width: 100%;
+        top: -90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    main div#mainContents div.item section h1{
+        position: relative;
+        width: 100%;
+        top: -90%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.5rem;
+    }
+
+    main div#mainContents div.item section p{
+        display: none;
+    }
+
+    main div#mainContents div.item section button{
+        width: 75%;
+        position: relative;
+        top: 80%;
+    }
 }
