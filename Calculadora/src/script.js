@@ -1,52 +1,49 @@
-const visor = document.getElementById("visor");
-visor.innerText = "0";
+let visorText = document.getElementById("visorText");
 
-const buttons = document.querySelectorAll("button");
-function confgButtons(button){
-    const clickUser = button.innerText;
-    const nowValue = visor.textContent;
+let nowValue;
 
-    if(clickUser === "C"){
-        visor.innerText = "0";
-        return;
-    }else if(clickUser.trim() === ""){
-        if(nowValue.length <= 1 || nowValue === "0"){
-            visor.innerText = "0";
-            return;
-        }else{
-            visor.innerText = visor.innerText.slice(0, -1);
-        };
-    }else if(nowValue === "0"){
-        if(clickUser === "0"){
-            visor.innerText = "0";
-            return;
-        }else if(clickUser === "."){
-            if(nowValue.includes(".")){
-                return;
-            }else{
-                if(visor.innerText === "0" || visor.innerText === "."){
-
-                    visor.innerText = "0.";
-                }else{
-                    visor.innerText += clickUser;
-                };
-            };
-        }else{
-            visor.innerText = clickUser;
-        };
-    }else if(visor.textContent.length >= 11) {
-        return;
-    }else{
-        visor.innerText += clickUser;
-    };
-};
-
-window.addEventListener("DOMContentLoaded", () =>{
+function insertNumber(){
+    const buttons = document.querySelectorAll(".style1");
     buttons.forEach(button =>{
-        button.addEventListener("click", (e) =>{
-            e.preventDefault();
+        button.addEventListener("click", () =>{
+            nowValue = visorText.textContent || 0;
+            const buttonClick = button.textContent;
 
-            confgButtons(button);
+            if (nowValue === "0"){
+                visorText.innerText = buttonClick;
+            }else{
+                visorText.innerText += buttonClick;
+            };
         });
     });
-});
+};
+
+function otherFunctions(){
+    const buttons = document.querySelectorAll(".style1");
+    buttons.forEach(button =>{
+        button.addEventListener("click", () =>{
+            nowValue = visorText.textContent || 0;
+            const buttonClick = button.textContent;
+
+            if(buttonClick === "C"){
+                visorText.innerText = "0";
+            };
+
+            if(buttonClick === "±"){
+                if(nowValue === "0"){
+                    return;
+                }else if(nowValue.startsWith("-")){
+                    visorText.innerText = nowValue.replace("-", "");
+                }else{
+                    if(nowValue[0] === "-"){
+                        const result = nowValue.split("").filter(minus => minus !== "-").join("");
+                        visorText.innerText = result;
+                    };
+                };
+            };
+        });
+    });
+};
+
+insertNumber();
+otherFunctions();

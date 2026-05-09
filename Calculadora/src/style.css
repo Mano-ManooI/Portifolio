@@ -1,75 +1,115 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
-    padding: 0;
+@keyframes pulseCircle{
+    0%{
+
+    }
+    50%{
+
+    }
+    100%{
+        
+    }
+}
+html, body {
     margin: 0;
-    background: none;
-    border: none;
-    font-family: "Roboto", serif;
-    font-weight: bolder;
-    transition: all 0.5s;
-}
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #000;
+    background-image:
+        radial-gradient(circle at bottom left, rgba(0, 208, 255, 0.3) 0%, transparent 40%),
+        radial-gradient(circle at top right, rgba(0, 168, 150, 0.3) 0%, transparent 40%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
 
-html, body{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-main{
-    padding: 25px;
-    background: #888;
-    border-radius: 25px;
-    box-shadow: 0 0 8px rgba(0,0,0.14);
-}
-
-span#visor{
-    display: block;
-    box-sizing: border-box;
-    padding: 10px 25px;
-    margin-bottom: 15px;
-    background: #fff;
-    border: 1px solid #777;
-    border-radius: 25px;
-    font-size: 2rem;
-    text-align: right;
-    cursor: default;
+    /* Configuração do tamanho dos quadrados da grade */
+    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
 }
 
 button{
-    padding: 5px 10px;
-    margin: 3px;
-    width: 55px;
-    height: 55px;
     cursor: pointer;
-    border-radius: 8px;
-    font-size: 1.5rem;
-    text-align: center;
+    border: none;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main div#shapes{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+main div#shapes span#grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+div#calculator{
+    padding: 25px;
+    background: #151A22;
+    border: 2px solid #1E2530;
+    border-radius: 25px;
+    z-index: 1;
+}
+
+main div#visor{
+    width: 250px;
+    height: 80px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: #141920;
+    border: 0.5px solid #1E2530;
+    color: #fff;
+    border-radius: 80px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+main div#keyboard section button{
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    transition: all 0.2s ease-in-out;
+}
+
+main div#keyboard section button.style1{
+    background: rgb(37, 37, 37);
     color: #fff;
 }
 
-#buttonsSection .type1{
-    background: #f00;
+main div#keyboard section button.style1[value="0"]{
+    width: 134px;
 }
 
-#buttonsSection .type2{
-    background: #4545;
+main div#keyboard section button.style1:hover{
+    background: rgb(48, 48, 48);
 }
 
-#buttonsSection .type3{
-    background: rgb(0, 143, 199);
+main div#keyboard section button.style2{
+    background: rgb(25, 209, 195);
+    color: #222;
 }
 
-#buttonsSection .type1:hover{
-    background: rgb(224, 6, 6);
-}
-
-#buttonsSection .type2:hover{
-    background: rgba(37, 44, 37, 0.37);
-}
-
-#buttonsSection .type3:hover{
-    background: rgb(3, 119, 165);
+main div#keyboard section button.style2:hover{
+    background: rgb(13, 165, 152);
 }
