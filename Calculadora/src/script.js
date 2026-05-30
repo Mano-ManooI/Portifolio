@@ -17,7 +17,7 @@ function setupCalculator(){
         });
         button.addEventListener("click", () =>{
             nowValue = visorText.textContent || "0";
-            const buttonClick = button.textContent;
+            const buttonClick = button.textContent.trim();
 
             if(buttonClick === "C"){
                 visorText.innerText = "0";
@@ -29,7 +29,7 @@ function setupCalculator(){
             if(buttonClick === "±"){
                 if(nowValue === "0"){
                     return;
-                }else if (nowValue.startsWith("-")){
+                }else if(nowValue.startsWith("-")){
                     visorText.innerText = nowValue.replace("-", "");
                 }else{
                     visorText.innerText = `-${nowValue}`;
@@ -50,7 +50,7 @@ function setupCalculator(){
 
             if(nowValue === "0" && buttonClick !== "."){
                 visorText.innerText = buttonClick;
-            }else if (nowValue.length > 11){
+            }else if(nowValue.length > 11){
                 return;
             }else{
                 visorText.innerText += buttonClick;
@@ -63,32 +63,48 @@ function setupCalculator(){
             nowValue = parseFloat(visorText.textContent) || 0;
             const buttonClick = button.textContent.trim();
 
-            const operations = {
-                "÷": firstNumber / nowValue,
-                "x": firstNumber * nowValue,
-                "-": firstNumber - nowValue,
-                "+": firstNumber + nowValue,
+            const getResult = () =>{
+                const operations = {
+                    "÷": firstNumber / nowValue,
+                    "x": firstNumber * nowValue,
+                    "-": firstNumber - nowValue,
+                    "+": firstNumber + nowValue,
+                };
+                return operations[operator];
             };
                 
-            const result = operations[operator];
             if(buttonClick === "="){
                 if(firstNumber === null || operator === null) return;
 
+                const result = getResult();
                 if(result === undefined){
                     console.error("Operador não reconhecido: ", operator);
                     return;
                 };
 
-                visorText.innerText = "0";
-                dataVison.innerText = result;
+                const resultToVisor = result.toString().length > 11 ? result.toExponential(5) : result.toString(); 
+                visorText.innerText = resultToVisor;
+                dataVison.innerText = `${firstNumber} ${operator} ${nowValue} = `;
                 firstNumber = null;
                 operator = null;
                 return;
             };
 
-            firstNumber = nowValue;
+            if(firstNumber !== null && operator !== null){
+                const result = getResult();
+                if(result !== undefined){
+                    const resultToVisor = result.toString().length > 11 ? result.toExponential(5) : result.toString();
+                    visorText.innerText = resultToVisor;
+                    firstNumber = result;
+                }else{
+                    firstNumber = nowValue;
+                }
+            }else{
+                firstNumber = nowValue;
+            };
+
             operator = buttonClick;
-            dataVison.innerText = `${nowValue} ${operator}`;
+            dataVison.innerText = `${firstNumber} ${operator}`;
             visorText.innerText = "0";
         });
     });

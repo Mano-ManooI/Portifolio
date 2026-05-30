@@ -66,32 +66,34 @@ div#calculator{
     z-index: 1;
 }
 
-main div#visor{
+main div#visor {
     width: 280px;
     height: 80px;
     margin-bottom: 20px;
     display: flex;
-    align-items: center;
-    justify-content: right;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 10px 10px;
+    box-sizing: border-box;
     background: #141920;
     border: 0.5px solid #1E2530;
     border-radius: 20px;
-    font-weight: bolder;
 }
 
 main div#visor span#visorText{
-    margin-right: 10px;
-    margin-bottom: -20px;
     color: #fff;
     font-size: 2rem;
+    font-weight: bolder;
+    line-height: 1;
 }
 
 main div#visor span#dataVision{
-    position: absolute;
-    top: 105px;
-    left: 550px;
     color: #bebebe;
     font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+    align-self: flex-start;
 }
 
 main div#keyboard section button{
